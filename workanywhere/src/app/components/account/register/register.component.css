@@ -15,16 +15,8 @@ button{
     cursor: pointer;
     width: 100%;
 }
-.btn_login {
-    background-color: #4CAF50;
-}
-span.password {
-    float: right;
-    padding-top: 4px;
-}
-span.register {
-    float: left;
-    padding-top: 4px;
+.btn_register {
+    background-color: #240294;
 }
 .container{
   width: 350px;

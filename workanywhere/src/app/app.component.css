@@ -8,13 +8,15 @@
   z-index: 1030;
 }
 .logo-image {
-  padding-top: 20px;
+  padding-top: 10px;
+  vertical-align: middle;
 }
 .t3-mainbody {
   width: 100%;
   position: relative;
   top: 40px;
   min-height: 650px;
+  margin: 20px;
 }
 .t3-footer {
   background: #242729;

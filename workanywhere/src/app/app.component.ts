@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'WELCOME TO WORK ANYWHERE SITE!';
+  title = 'Wellcome to Work Anywhere :)';
 }

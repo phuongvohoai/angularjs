@@ -18,3 +18,20 @@ body {
     width: auto;
     clear: both;
 }
+.block {
+  width: 100%;
+  float: left;
+}
+.none {
+  margin: 0;
+  padding: 0;
+}
+.none-list-style li{
+  list-style: none;
+}
+.fa {
+  padding-right: 5px;
+}
+ul {
+  -webkit-padding-start: 0px;
+}

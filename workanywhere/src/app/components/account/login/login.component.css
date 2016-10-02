@@ -1,3 +1,15 @@
+.login {
+   float: none;
+   margin: 60px auto;
+   padding: 20px;
+   background: #fff;
+   -webkit-box-shadow: 0px 1px 0px 0px #d4d5d6;
+   box-shadow: 0px 1px 0px 0px #d4d5d6;
+}
+.login-title {
+  text-align: center;
+  color: #4275F4;
+}
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -20,12 +32,14 @@ button{
 }
 span.password {
     float: right;
+    width: auto;
     padding-top: 4px;
 }
 span.register {
-    float: left;
     padding-top: 4px;
 }
+/* Cai nay css cua bootstrap khong duoc chinh sua
 .container{
   width: 350px;
 }
+*/

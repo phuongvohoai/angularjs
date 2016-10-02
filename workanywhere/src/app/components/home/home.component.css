@@ -1,0 +1,128 @@
+.jobs-feed {
+  text-align: center;
+}
+.jobs-item {
+  padding: 0 10px;
+  float: left;
+  margin-bottom: 20px;
+}
+.jobs-item > article {
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 1px 0px 0px #d4d5d6;
+  box-shadow: 0px 1px 0px 0px #d4d5d6;
+  float: left;
+}
+.page-title {
+  line-height: 1.1;
+  margin: 0;
+  color: #222222;
+  font-size: 27px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  text-align: center;
+}
+.item-image {
+  position: relative;
+}
+.item-image > img {
+  width: 100%;
+  height: 120px;
+}
+.item-image > span {
+  width: auto;
+  padding: 5px;
+  -webkit-box-shadow: 0px 1px 0px 0px #d4d5d6;
+  box-shadow: 0px 1px 0px 0px #d4d5d6;
+  color: #fff;
+  font-weight: 700;
+}
+.item-image .distance {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  z-index: 1000;
+  background: #3498DB;
+}
+.item-image .money {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 1000;
+  background: #F39C12;
+}
+.item-image .status {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  z-index: 1000;
+  background: #E74C3C;
+}
+.item-title {
+  text-align: center;
+  font-size: 22px;
+  padding: 10px 0;
+}
+.item-title > a {
+  color: #34495E;
+}
+.item-title > a:hover {
+  color: #0d48dd;
+  text-decoration: none;
+}
+.item-aside {
+  color: #999999;
+  background: #e9ebee;
+  padding: 5px;
+}
+.post-info > li {
+  float: left;
+  font-size: 11px;
+}
+.item-description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.item-description > p {
+  text-align: justify;
+}
+.item-footer {
+  border-top: 1px solid #e1e2e3;
+  padding-top: 5px;
+  text-align: center;
+}
+.btn-loadmore {
+  background: #4275f4;
+  -webkit-box-shadow: 0px 1px 0px 0px #d4d5d6;
+  box-shadow: 0px 1px 0px 0px #d4d5d6;
+  width: 50%;
+  color: #fff;
+  font-weight: 700;
+}
+.btn-loadmore:hover {
+  background: #3498DB;
+}
+/* Image hover - Flashing */
+.item-image:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,29 @@
+
+.t3-header {
+  background: #4275f4;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 1030;
+}
+.logo-image {
+  padding-top: 20px;
+}
+.t3-mainbody {
+  width: 100%;
+  position: relative;
+  top: 40px;
+  min-height: 650px;
+}
+.t3-footer {
+  background: #242729;
+  color: #999999;
+  padding: 20px;
+}
+.copyright {
+  text-align: center;
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}

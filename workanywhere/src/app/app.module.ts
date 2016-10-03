@@ -9,13 +9,15 @@ import { routing, appRoutingProviders }  from './app.routing';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/account/login/login.component';
 import { RegisterComponent } from './components/account/register/register.component';
+import { ForgotpasswordComponent } from './components/account/forgotpassword/forgotpassword.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotpasswordComponent
   ],
   imports: [
     BrowserModule,

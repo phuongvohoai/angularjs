@@ -7,8 +7,10 @@
   position: fixed;
   z-index: 1030;
 }
-.logo-image {
+.logo, .head-search {
   padding-top: 10px;
+}
+.logo-image {
   vertical-align: middle;
 }
 .t3-mainbody {
@@ -26,4 +28,63 @@
   float: none;
   margin-right: auto;
   margin-left: auto;
+}
+.search {
+  position: relative;
+}
+.head-search form {
+  margin: 0;
+}
+.head-search div.search:before {
+  font-family: "FontAwesome";
+  content: "\f002";
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.head-search .form-control {
+  width: 300px;
+  padding-left: 30px;
+  background-color: rgba(255,255,255,0.2);
+  border-color: transparent;
+  color: rgba(255,255,255,0.5);
+  display: inline-block;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+input[type="search"].form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(255,255,255,0.5);
+}
+input[type="search"].form-control::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(255,255,255,0.5);
+}
+input[type="search"].form-control:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(255,255,255,0.5);
+}
+input[type="search"].form-control:-moz-placeholder { /* Firefox 18- */
+  color: rgba(255,255,255,0.5);
+}
+.login div .btn-default {
+  background: none !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+  padding-left: 0;
+}
+.login div {
+  border-left: 1px solid rgba(225,225,225,0.2);
+  height: 60px;
+  line-height: 1;
+  padding: 10px 20px;
+}
+.btn-register {
+  padding: 10px 16px;
+  font-size: 11px;
+  line-height: 1.53846154;
+  border-radius: 3px;
+  background-image: none !important;
+  text-transform: uppercase;
+  font-weight: 700;
 }

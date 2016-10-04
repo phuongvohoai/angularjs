@@ -10,6 +10,10 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/account/login/login.component';
 import { RegisterComponent } from './components/account/register/register.component';
 import { ForgotpasswordComponent } from './components/account/forgotpassword/forgotpassword.component';
+import { ChangepasswordComponent } from './components/account/changepassword/changepassword.component';
+import { EditprofileComponent } from './components/account/editprofile/editprofile.component';
+
+import { PostjobComponent } from './components/postjob/postjob.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,10 @@ import { ForgotpasswordComponent } from './components/account/forgotpassword/for
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    ChangepasswordComponent,
+    EditprofileComponent,
+    PostjobComponent
   ],
   imports: [
     BrowserModule,

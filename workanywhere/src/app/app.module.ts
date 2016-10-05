@@ -12,6 +12,7 @@ import { RegisterComponent } from './components/account/register/register.compon
 import { ForgotpasswordComponent } from './components/account/forgotpassword/forgotpassword.component';
 import { ChangepasswordComponent } from './components/account/changepassword/changepassword.component';
 import { EditprofileComponent } from './components/account/editprofile/editprofile.component';
+import { DetailpostComponent } from './components/detailpost/detailpost.component';
 
 import { PostjobComponent } from './components/postjob/postjob.component';
 
@@ -24,7 +25,8 @@ import { PostjobComponent } from './components/postjob/postjob.component';
     ForgotpasswordComponent,
     ChangepasswordComponent,
     EditprofileComponent,
-    PostjobComponent
+    PostjobComponent,
+    DetailpostComponent
   ],
   imports: [
     BrowserModule,

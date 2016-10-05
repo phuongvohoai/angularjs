@@ -14,6 +14,10 @@ body {
     background-color: #f4f5f6;
     margin: 0;
 }
+.center {
+    margin: auto;
+    float: none;
+}
 .wrap {
     width: auto;
     clear: both;

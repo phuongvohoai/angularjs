@@ -1,0 +1,15 @@
+1. Suppend/Stop proccess in terminal 
+Suppend: Ctrl + Z
+Stop: Ctr
+
+2. Create file with vim
+vim ten_file
+
+3. Save file with vim
+press ESC 
+:w writtem
+:q quit
+
+4. Run nodejs
+node ten_file
+

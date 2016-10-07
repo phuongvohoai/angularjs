@@ -1,0 +1,39 @@
+﻿__Object NGUOIDUNG__
+*ID
+--Thông tin cá nhân
+*Hình đại diện
+*Họ Tên
+*Email
+*Mật khẩu
+*Giới Tính
+*Ngày Sinh
+*Số Điện Thoại
+
+--Thông tin địa chỉ
+*Địa Chỉ
+*Tỉnh/Thành (o)
+	
+--Thông tin trình độ
+Trường
+Chuyên Ngành
+*Trình độ học vấn (o)
+
+--Mô tả công việc mong muốn
+*Ngành nghề (Job category) (o)
+*Loại hình công việc (Job type) (o)
+
+__Object THANHPHO__
+Mã Tỉnh/Thành
+Tên Tỉnh/Thành
+
+__Object TRINHDO__
+Mã Trình Độ
+Tên Trình Độ
+
+__Object NGANHNGHE__
+Mã Ngành Nghề
+Tên Ngành Nghề
+
+__Object LOAICONGVIEC__
+Mã Loại Công Việc
+Tên Loại Công Việc

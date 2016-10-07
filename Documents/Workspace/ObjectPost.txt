@@ -1,0 +1,40 @@
+Tin đăng:
+1. Tiêu đề
+2. Ngày đăng
+3. Loại tin đăng (Object)
+4. Danh sách người thich
+5. Số lượng lượt xem
+6. Ngày hết hạn
+7. Trạng thái tin đăng: Done, New, Hot,..
+8. Nội dung tin đăng
+9. Địa điểm
+10. Giá tiền
+11. Hình ảnh (danh sách)
+12. Số lượng người làm việc
+13. Việc làm của bạn
+14. Trạng thái vi phạm của bài viết
+15. Điểm đánh giá
+(worker)
+16. Giới thiệu bản thân 
+17. Danh sách kỹ năng
+18. Huy hiệu
+19. Người đăng tin (user)
+
+Loai tin đăng
+1. Tên loại tin
+2. Cha
+3. Mô tả
+
+Hinh anh
+1. Tiêu đề
+2. Nội dung (binary)
+3. Đường dần thư mục lưu ảnh
+4. Description
+
+Message
+1. ID Nguoi Gui
+2. ID Nguoi Nhan
+3. Ngay Gui
+4. Noi dung
+5. Trang Thai: Đã gữi, đã xem, chưa gửi
+6. Trang Thai:

@@ -37,4 +37,4 @@ Message
 3. Ngay Gui
 4. Noi dung
 5. Trang Thai: Đã gữi, đã xem, chưa gửi
-6. Trang Thai:
+6. Trang Thai: 

@@ -1,26 +1,23 @@
 ﻿__Object NGUOIDUNG__
-*ID
+	*ID
 --Thông tin cá nhân
-*Hình đại diện
-*Họ Tên
-*Email
-*Mật khẩu
-*Giới Tính
-*Ngày Sinh
-*Số Điện Thoại
-
+	*Hình đại diện
+	*Họ Tên
+	*Email
+	*Mật khẩu
+	*Giới Tính
+	*Ngày Sinh
+	*Số Điện Thoại
 --Thông tin địa chỉ
-*Địa Chỉ
-*Tỉnh/Thành (o)
-	
+	*Địa Chỉ
+	*Tỉnh/Thành (o)	
 --Thông tin trình độ
-Trường
-Chuyên Ngành
-*Trình độ học vấn (o)
-
+	Trường
+	Chuyên Ngành
+	*Trình độ học vấn (o)
 --Mô tả công việc mong muốn
-*Ngành nghề (Job category) (o)
-*Loại hình công việc (Job type) (o)
+	*Ngành nghề (Job category) (o)
+	*Loại hình công việc (Job type) (o)
 
 __Object THANHPHO__
 Mã Tỉnh/Thành

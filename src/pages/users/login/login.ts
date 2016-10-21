@@ -14,6 +14,5 @@ export class LoginPage {
     signUpPage = SignUpPage;
     
     constructor(public navCtrl: NavController) {
-
     }
 }

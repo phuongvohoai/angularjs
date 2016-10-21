@@ -13,12 +13,16 @@
                 <ion-label stacked>Username</ion-label>
                 <ion-input type="text" name="username" [(ngModel)]="user.username" required
                     minlength="5" maxlength="8" #username="ngModel"></ion-input>
-                <ion-label [hidden]="username.valid || (username.pristine && !f.submitted)">User name is not correct!</ion-label>
             </ion-item>
+                <ion-label class="msgError" [hidden]="username.valid || (username.pristine && !f.submitted)">
+                    User name is not correct!</ion-label>
             <ion-item>
                 <ion-label stacked>Display Name</ion-label>
-                <ion-input type="text" name="displayName" [(ngModel)]="user.displayName"></ion-input>
+                <ion-input type="text" name="displayName" [(ngModel)]="user.displayName" required
+                    maxlength="8" #displayName="ngModel"></ion-input>
             </ion-item>
+            <ion-label class="msgError" [hidden]="displayName.valid || (displayName.pristine && !f.submitted)">
+                    User name is not correct!</ion-label>
             <ion-item>
                 <ion-label stacked>Email</ion-label>
                 <ion-input type="text" name="email" [(ngModel)]="user.email"></ion-input>

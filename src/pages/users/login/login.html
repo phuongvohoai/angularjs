@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form #form="ngForm" novalidate>
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>Username</ion-label>
+                <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label stacked>Password</ion-label>
+                <ion-input type="password"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button color="dark" clear [navPush]="forgotPasswordPage">Forgot Password?</button>
+        <button ion-button class="right" clear [navPush]="signUpPage">Sign Up</button>
+        <button ion-button full color="secondary">Login</button>
+    </form>
+    <button ion-button full>Login with Facebook</button>
+    <button ion-button full color="danger">Login with Google+</button>
+</ion-content>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 /*
@@ -8,15 +8,17 @@ import { NavController } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
+  //moduleId: module.id,
   selector: 'page-editprofile',
   templateUrl: 'editprofile.html'
 })
-export class Editprofile {
+
+export class Editprofile{
+
+  public editprofileFrom:any;
 
   constructor(public navCtrl: NavController) {}
-
   ionViewDidLoad() {
     console.log('Hello Editprofile Page');
   }
-
 }

@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { Login } from '../pages/login/login';
 import { Register } from '../pages/register/register';
 import { Editprofile } from '../pages/profile/editprofile/editprofile';
@@ -20,7 +23,7 @@ import { Viewpost } from '../pages/post/viewpost/viewpost';
     Viewpost
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    BrowserModule, ReactiveFormsModule, IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

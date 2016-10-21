@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { IonicApp, IonicModule } from 'ionic-angular';
+
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -8,9 +10,12 @@ import { SignUpPage } from '../pages/users/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/users/login/login';
 import { ForgotPasswordPage } from '../pages/users/forgotpassword/forgotpassword';
+import { ControlMessages } from '../components/controlmessages';
+import { ValidationService } from '../services/validationservice';
 
 @NgModule({
   declarations: [
+    ControlMessages,
     MyApp,
     AboutPage,
     ContactPage,
@@ -21,7 +26,8 @@ import { ForgotPasswordPage } from '../pages/users/forgotpassword/forgotpassword
     ForgotPasswordPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,6 +40,6 @@ import { ForgotPasswordPage } from '../pages/users/forgotpassword/forgotpassword
     LoginPage,
     ForgotPasswordPage
   ],
-  providers: []
+  providers: [ValidationService]
 })
 export class AppModule {}

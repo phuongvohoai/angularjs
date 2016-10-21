@@ -7,36 +7,40 @@
 </ion-header>
 
 <ion-content padding>
-    <form #f="ngForm" novalidate (ngSubmit)="save(f.value, f.valid)">
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
         <ion-list>
             <ion-item>
                 <ion-label stacked>Username</ion-label>
-                <ion-input type="text" name="username" [(ngModel)]="user.username" required
-                    minlength="5" maxlength="8" #username="ngModel"></ion-input>
-            </ion-item>
-                <ion-label class="msgError" [hidden]="username.valid || (username.pristine && !f.submitted)">
-                    User name is not correct!</ion-label>
+                <ion-input type="text" id="username" formControlName="username"></ion-input>
+            </ion-item>   
+            <control-messages [control]="signUpForm.controls.username"></control-messages>
+         
             <ion-item>
                 <ion-label stacked>Display Name</ion-label>
-                <ion-input type="text" name="displayName" [(ngModel)]="user.displayName" required
-                    maxlength="8" #displayName="ngModel"></ion-input>
-            </ion-item>
-            <ion-label class="msgError" [hidden]="displayName.valid || (displayName.pristine && !f.submitted)">
-                    User name is not correct!</ion-label>
+                <ion-input type="text" id="displayName" formControlName="displayName"></ion-input>
+            </ion-item>   
+            <control-messages [control]="signUpForm.controls.displayName"></control-messages>
+       
             <ion-item>
                 <ion-label stacked>Email</ion-label>
-                <ion-input type="text" name="email" [(ngModel)]="user.email"></ion-input>
+                <ion-input type="text" id="email" formControlName="email"></ion-input>
             </ion-item>
+            <control-messages [control]="signUpForm.controls.email"></control-messages>
+
             <ion-item>
                 <ion-label stacked>Password</ion-label>
-                <ion-input type="password" name="password" [(ngModel)]="user.password"></ion-input>
+                <ion-input type="password" id="password" formControlName="password"></ion-input>
             </ion-item>
+            <control-messages [control]="signUpForm.controls.password"></control-messages>
+
             <ion-item>
                 <ion-label stacked>Confirm Password</ion-label>
-                <ion-input type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword"></ion-input>
+                <ion-input type="password" id="confirmPassword" formControlName="confirmPassword"></ion-input>
             </ion-item>
+            <control-messages [control]="signUpForm.controls.confirmPassword"></control-messages>
+
         </ion-list>
-        <button ion-button full color="secondary" type="submit">Create New Account</button>
+        <button ion-button full color="secondary" type="submit" [disabled]="!signUpForm.valid">Create New Account</button>
     </form>
     <button ion-button full>Register via Facebook</button>
     <button ion-button full color="danger">Register via Google+</button>

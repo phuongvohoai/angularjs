@@ -1,0 +1,17 @@
+page-viewprofile {
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  ion-label{
+    width: 20%;
+  }
+  ion-datetime{
+    width: 80%;
+  }
+  ion-img{
+    width: 100px;
+    height: 100px;
+  }
+}

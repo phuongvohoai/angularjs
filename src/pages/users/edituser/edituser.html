@@ -4,69 +4,80 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding="true" class="has-header">
-  <ion-img src="/assets/images/default_user.png" class="center"></ion-img>
-  <ion-label>Personal</ion-label>
+<ion-content padding>
+  <form [formGroup]="edituserForm" (ngSubmit)="onSubmit()">
+    <ion-img src="/assets/images/default_user.png" class="img-center"></ion-img>
+    <ion-label>Personal</ion-label>
+    <ion-list>
+      <ion-item>
+        <ion-label color="primary" stacked>Name</ion-label>
+        <ion-input type="text" id="displayName" formControlName="displayName"></ion-input>
+      </ion-item>
+      <control-messages [control]="edituserForm.controls.displayName"></control-messages>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Gender</ion-label>
+        <ion-select [(ngModel)]="gender" formControlName="gender">
+          <ion-option value="f" selected="true">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+      <control-messages [control]="edituserForm.controls.gender"></control-messages>
+
+      <ion-item>
+        <ion-label color="primary" stacked>D.O.B</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" min="1960" max="2000" [(ngModel)]="birthday" formControlName="birthday"></ion-datetime>
+      </ion-item>
+      <control-messages [control]="edituserForm.controls.birthday"></control-messages>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Phone</ion-label>
+        <ion-input type="tel" id="phone" formControlName="phone"></ion-input>
+      </ion-item>
+      <control-messages [control]="edituserForm.controls.phone"></control-messages>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Email</ion-label>
+        <ion-input type="text" id="email" formControlName="email"></ion-input>
+      </ion-item>
+      <control-messages [control]="edituserForm.controls.email"></control-messages>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Address</ion-label>
+      <ion-input type="text" id="address" formControlName="address"></ion-input>
+    </ion-item>
+    <control-messages [control]="edituserForm.controls.address"></control-messages>
+  </ion-list>
+
+  <ion-label>General Information</ion-label>
   <ion-list>
     <ion-item>
-      <ion-label color="primary" stacked>Name</ion-label>
-      <ion-input></ion-input>
+      <ion-label color="primary" stacked>About</ion-label>
+      <ion-input type="text" id="about" formControlName="about"></ion-input>
     </ion-item>
+    <control-messages [control]="edituserForm.controls.about"></control-messages>
 
     <ion-item>
-      <ion-label color="primary" stacked>Gender</ion-label>
-      <ion-select [(ngModel)]="gender">
-        <ion-option value="f" selected="true">Female</ion-option>
-        <ion-option value="m">Male</ion-option>
+      <ion-label color="primary" stacked>Category</ion-label>
+      <ion-select [(ngModel)]="category" multiple="true" formControlName="category">
+        <ion-option value="c1">Category 1</ion-option>
+        <ion-option value="c2">Category 2</ion-option>
+        <ion-option value="c3">Category 3</ion-option>
+        <ion-option value="c4">Category 4</ion-option>
+        <ion-option value="c5">Category 5</ion-option>
       </ion-select>
     </ion-item>
+    <control-messages [control]="edituserForm.controls.category"></control-messages>
 
     <ion-item>
-      <ion-label color="primary" stacked>D.O.B</ion-label>
-      <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" min="1960" max="2000" [(ngModel)]="birthday"></ion-datetime>
+      <ion-label color="primary" stacked>Type</ion-label>
+      <ion-select [(ngModel)]="type" multiple="true" formControlName="type"> 
+        <ion-option value="t1">Full-time</ion-option>
+        <ion-option value="t2">Part-time</ion-option>
+      </ion-select>
     </ion-item>
-
-    <ion-item>
-      <ion-label color="primary" stacked>Mobile</ion-label>
-      <ion-input type="tel"></ion-input>
-    </ion-item>
-
-    <ion-item>
-     <ion-label color="primary" stacked>Email</ion-label>
-     <ion-textarea rows="1"></ion-textarea>
-   </ion-item>
-
-   <ion-item>
-     <ion-label color="primary" stacked>Address</ion-label>
-     <ion-input></ion-input>
-   </ion-item>
- </ion-list>
-
- <ion-label>General Information</ion-label>
- <ion-list>
-   <ion-item>
-    <ion-label color="primary" stacked>About</ion-label>
-    <ion-textarea></ion-textarea>
-  </ion-item>
-
-  <ion-item>
-    <ion-label color="primary" stacked>Category</ion-label>
-    <ion-select [(ngModel)]="category" multiple="true">
-      <ion-option value="c1" selected="true">Category 1</ion-option>
-      <ion-option value="c2">Category 2</ion-option>
-      <ion-option value="c3">Category 3</ion-option>
-      <ion-option value="c4">Category 4</ion-option>
-      <ion-option value="c5">Category 5</ion-option>
-    </ion-select>
-  </ion-item>
-
-  <ion-item>
-    <ion-label color="primary" stacked>Type</ion-label>
-    <ion-select [(ngModel)]="type" multiple="true">
-      <ion-option value="t1" selected="true">Full-time</ion-option>
-      <ion-option value="t2">Part-time</ion-option>
-    </ion-select>
-  </ion-item>
- </ion-list>
-    <button ion-button round class="center">Save</button>
+    <control-messages [control]="edituserForm.controls.type"></control-messages>
+  </ion-list>
+      <button ion-button round type="submit" [disabled]="!edituserForm.valid">Save</button>
+  </form>
 </ion-content>

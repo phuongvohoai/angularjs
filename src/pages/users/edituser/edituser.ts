@@ -1,22 +1,36 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { ValidationService } from '../../../services/validation.service';
 
-/*
-  Generated class for the Editprofile page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-edituser',
   templateUrl: 'edituser.html'
 })
+
 export class EditUserPage {
 
-  constructor(public navCtrl: NavController) {}
+  edituserForm: any;
 
-  ionViewDidLoad() {
-    console.log('Hello edituser Page');
+  constructor(public navCtrl: NavController, private fb: FormBuilder) {
+    this.edituserForm = fb.group({
+            "displayName":["", Validators.compose([Validators.required])],
+            "gender":[""],
+            "birthday":["",Validators.required],
+            "phone":["", Validators.compose([Validators.required,
+                                            ValidationService.phoneNumberValidator])],
+            "email":["", Validators.compose([Validators.required,
+                                            ValidationService.emailValidator])],
+            "address":["", Validators.compose([Validators.required])],
+            "about":["", Validators.compose([Validators.required])],
+            "category":[""],
+            "type":["",Validators.required]
+        });
   }
+
+  onSubmit() {
+        console.log("model-based form submitted");
+        console.log(this.edituserForm);
+    }
 
 }

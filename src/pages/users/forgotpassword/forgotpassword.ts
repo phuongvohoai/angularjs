@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { User } from '../models/user.interface';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { ValidationService } from '../../../services/validation.service';
 
 @Component({
   selector: 'page-forgotpassword',
@@ -9,20 +10,18 @@ import { User } from '../models/user.interface';
 
 export class ForgotPasswordPage {
 
-  public user: User;
+  forgotPasswordForm: any;
 
-  constructor(public navCtrl: NavController) {
-    this.user = {
-            username: "",
-            displayName: "",
-            email: "",
-            password: "",
-            confirmPassword: ""
-        }
+  constructor(public navCtrl: NavController, private fb: FormBuilder) {
+    this.forgotPasswordForm = fb.group({
+            "email":["", Validators.compose([Validators.required,
+                                            ValidationService.emailValidator])]
+        });
   }
 
-  ionViewDidLoad() {
-    console.log('Hello Forgotpassword Page');
-  }
+  onSubmit() {
+        console.log("model-based form submitted");
+        console.log(this.forgotPasswordForm);
+    }
 
 }

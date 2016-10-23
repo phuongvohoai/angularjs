@@ -1,14 +1,25 @@
-export class ValidationService {
+export class ValidationService{
     static getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
         let config = {
             'required': 'Required',
             'invalidCreditCard': 'Is invalid credit card number',
-            'invalidEmailAddress': 'Invalid email address',
-            'invalidPassword': 'Invalid password. Password must be at least 6 characters long, and contain a number.',
-            'minlength': `Minimum length ${validatorValue.requiredLength}`
+            'invalidPhone': 'Invalid phone number',
+            'invalidEmail': 'Invalid email address',
+            'invalidPassword': 'Password must be at least 6 characters long, and contain a number.',
+            'minlength': `Minimum length is ${validatorValue.requiredLength}`,
+            'maxlength': `Maximum length is ${validatorValue.requiredLength}`
         };
 
         return config[validatorName];
+    }
+
+    static phoneNumberValidator(control) {
+        // Visa, MasterCard, American Express, Diners Club, Discover, JCB
+        if (control.value.match(/^[0-9]{8,11}$/)) {
+            return null;
+        } else {
+            return { 'invalidPhone': true };
+        }
     }
 
     static creditCardValidator(control) {
@@ -25,14 +36,14 @@ export class ValidationService {
         if (control.value.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/)) {
             return null;
         } else {
-            return { 'invalidEmailAddress': true };
+            return { 'invalidEmail': true };
         }
     }
 
     static passwordValidator(control) {
-        // {6,100}           - Assert password is between 6 and 100 characters
+        // {6,10}           - Assert password is between 6 and 10 characters
         // (?=.*[0-9])       - Assert a string has at least one number
-        if (control.value.match(/^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,100}$/)) {
+        if (control.value.match(/^(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{6,10}$/)) {
             return null;
         } else {
             return { 'invalidPassword': true };

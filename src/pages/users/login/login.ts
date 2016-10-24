@@ -13,6 +13,5 @@ export class LoginPage {
     forgotPasswordPage = ForgotPasswordPage;
     signUpPage = SignUpPage;
     
-    constructor(public navCtrl: NavController) {
-    }
+    constructor(public navCtrl: NavController) {}
 }

@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/users/login/login';
 import { ForgotPasswordPage } from '../pages/users/forgotpassword/forgotpassword';
 import { ControlMessages } from '../components/controlmessages.component';
 import { ValidationService } from '../services/validation.service';
+import { UserService } from '../services/user.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ValidationService } from '../services/validation.service';
     LoginPage,
     ForgotPasswordPage
   ],
-  providers: [ValidationService]
+  providers: [ValidationService, UserService]
 })
+
 export class AppModule {}

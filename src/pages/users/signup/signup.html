@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="signUpForm" (ngSubmit)="AddNewUser(signUpForm.value)">
         <ion-list>
             <ion-item>
                 <ion-label stacked>Username</ion-label>

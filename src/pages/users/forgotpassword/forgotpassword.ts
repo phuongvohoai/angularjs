@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { User } from '../models/user.interface';
 
 @Component({
   selector: 'page-forgotpassword',
@@ -9,17 +8,8 @@ import { User } from '../models/user.interface';
 
 export class ForgotPasswordPage {
 
-  public user: User;
 
-  constructor(public navCtrl: NavController) {
-    this.user = {
-            username: "",
-            displayName: "",
-            email: "",
-            password: "",
-            confirmPassword: ""
-        }
-  }
+  constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
     console.log('Hello Forgotpassword Page');

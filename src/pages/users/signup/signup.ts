@@ -1,7 +1,9 @@
 ﻿import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { ValidationService } from '../services/validationservice';
+import { ValidationService } from '../../../services/validation.service';
+import { UserService } from '../../../services/user.service'
+import { User } from '../../../models/user';
 
 @Component({
     selector: 'page-signup',
@@ -10,9 +12,9 @@ import { ValidationService } from '../services/validationservice';
 
 export class SignUpPage {
     
-    signUpForm: any;    
+    private signUpForm: any;     
     
-    constructor(public navCtrl: NavController, fb: FormBuilder) {
+    constructor(public navCtrl: NavController, fb: FormBuilder, private userService: UserService) {
         this.signUpForm = fb.group({
             "displayName": ["", Validators.required],
             "username":["", Validators.required],
@@ -21,8 +23,10 @@ export class SignUpPage {
             "email":["", Validators.required]
         });
     }
-    onSubmit() {
-        console.log("model-based form submitted");
+
+    public AddNewUser(user: any) {
+        this.userService.create(user as User);
+        console.log(user);
         console.log(this.signUpForm);
     }
 }

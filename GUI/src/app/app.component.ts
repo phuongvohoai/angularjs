@@ -3,6 +3,9 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { LoginPage } from '../pages/users/login/login';
+import { EditUserPage } from '../pages/users/edituser/edituser';
+import { ViewListUserPage } from '../pages/users/viewlistuser/viewlistuser';
+
 
 
 @Component({

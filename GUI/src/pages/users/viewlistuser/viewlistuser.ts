@@ -2,17 +2,15 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-forgotpassword',
-  templateUrl: 'forgotpassword.html'
+  selector: 'page-viewlistuser',
+  templateUrl: 'viewlistuser.html'
 })
-
-export class ForgotPasswordPage {
-
+export class ViewListUserPage {
 
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
-    console.log('Hello Forgotpassword Page');
+    console.log('Hello Viewlistuser Page');
   }
 
 }

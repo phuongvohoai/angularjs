@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sign Up
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+            <ion-item>
+                <ion-label stacked>Display Name</ion-label>
+                <ion-input type="text" id="displayName" formControlName="displayName"></ion-input>
+            </ion-item>   
+            <control-messages [control]="signUpForm.controls.displayName"></control-messages>
+            
+            <ion-item>
+                <ion-label stacked>Username</ion-label>
+                <ion-input type="text" id="username" formControlName="username"></ion-input>
+            </ion-item>   
+            <control-messages [control]="signUpForm.controls.username"></control-messages>
+       
+            <ion-item>
+                <ion-label stacked>Email</ion-label>
+                <ion-input type="text" id="email" formControlName="email"></ion-input>
+            </ion-item>
+            <control-messages [control]="signUpForm.controls.email"></control-messages>
+
+            <ion-item>
+                <ion-label stacked>Password</ion-label>
+                <ion-input type="password" id="password" formControlName="password"></ion-input>
+            </ion-item>
+            <control-messages [control]="signUpForm.controls.password"></control-messages>
+
+            <ion-item>
+                <ion-label stacked>Confirm Password</ion-label>
+                <ion-input type="password" id="confirmPassword" formControlName="confirmPassword"></ion-input>
+            </ion-item>
+            <control-messages [control]="signUpForm.controls.confirmPassword"></control-messages>
+
+        <button ion-button full color="secondary" type="submit" [disabled]="!signUpForm.valid">Create New Account</button>
+    </form>
+    <button ion-button full>Register via Facebook</button>
+    <button ion-button full color="danger">Register via Google+</button>
+</ion-content>

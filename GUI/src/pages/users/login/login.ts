@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { ValidationService } from '../../../services/validation.service';
 import { ForgotPasswordPage } from '../forgotpassword/forgotpassword';
-import { SignUpPage } from '../signup/signup';
+import { SignUpComponent } from '../../../components/signup.component';
 
 @Component({
   selector: 'page-login',
@@ -15,7 +15,7 @@ export class LoginPage {
     loginForm: any;
 
     forgotPasswordPage = ForgotPasswordPage;
-    signUpPage = SignUpPage;
+    signUpPage = SignUpComponent;
     
     constructor(public navCtrl: NavController, private fb: FormBuilder) {
       this.loginForm = fb.group({

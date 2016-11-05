@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Sign Up
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Sign Up
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
@@ -39,7 +39,7 @@
         </ion-item>
         <control-messages [control]="signUpForm.controls.confirmPassword"></control-messages>
         <!--Button Create New Account-->
-        <button ion-button full color="secondary" type="submit" [disabled]="!signUpForm.valid">Create New Account</button>
+        <button ion-button full color="secondary" type="submit" [navPush]="loginPage" [disabled]="!signUpForm.valid">Create New Account</button>
     </form>
     <button ion-button full>Register via Facebook</button>
     <button ion-button full color="danger">Register via Google+</button>

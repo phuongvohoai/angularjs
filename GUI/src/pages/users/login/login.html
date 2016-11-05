@@ -1,26 +1,26 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Login</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <ion-item>
-                <ion-label stacked>Username</ion-label>
-                <ion-input type="text" id="username" formControlName="username"></ion-input>
-            </ion-item>
-            <control-messages [control]="loginForm.controls.username"></control-messages>
+        <ion-item>
+            <ion-label stacked>Username</ion-label>
+            <ion-input type="text" id="username" formControlName="username"></ion-input>
+        </ion-item>
+        <control-messages [control]="loginForm.controls.username"></control-messages>
 
-            <ion-item>
-                <ion-label stacked>Password</ion-label>
-                <ion-input type="password" id="password" formControlName="password"></ion-input>
-            </ion-item>
-            <control-messages [control]="loginForm.controls.password"></control-messages>
+        <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input type="password" id="password" formControlName="password"></ion-input>
+        </ion-item>
+        <control-messages [control]="loginForm.controls.password"></control-messages>
 
         <button ion-button clear [navPush]="forgotPasswordPage">Forgot Password?</button>
         <button ion-button class="right" clear [navPush]="signUpPage">Sign Up</button>
-        <button ion-button full color="secondary" type="submit" [disabled]="!loginForm.valid">Login</button>
+        <button ion-button full color="secondary" type="submit" [navPush]="homePage" [disabled]="!loginForm.valid">Login</button>
     </form>
     <button ion-button full>Login with Facebook</button>
     <button ion-button full color="danger">Login with Google+</button>

@@ -4,6 +4,7 @@ import { Validators, FormBuilder } from '@angular/forms';
 import { AlertController } from 'ionic-angular';
 import { ValidationService } from '../services/validation.service';
 import { SignUpService } from '../services/user.signup.service';
+import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
 
 @Component({
     selector: 'page-signup',
@@ -14,6 +15,7 @@ import { SignUpService } from '../services/user.signup.service';
 export class SignUpViewModel {
 
     private signUpForm: any;
+    loginPage = LoginViewModel;
 
     constructor(
         public navCtrl: NavController,
@@ -24,7 +26,9 @@ export class SignUpViewModel {
         this.signUpForm = fb.group({
             "displayName": ["", Validators.compose([Validators.required])],
             "username": ["", Validators.compose([Validators.required,
-            Validators.minLength(4)])],
+                                                Validators.minLength(4),
+                                                Validators.maxLength(15),
+                                                ValidationService.userNameValidator])],
             "password": ["", Validators.compose([Validators.required,
             ValidationService.passwordValidator])],
             "confirmPassword": ["", Validators.compose([Validators.required])],

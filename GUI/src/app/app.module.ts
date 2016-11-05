@@ -8,6 +8,7 @@ import { ErrorMessagesControl } from '../components/errormessagecontrol.componen
 import { ValidationService } from '../services/validation.service';
 // Import view models
 import { AboutViewModel } from '../viewmodels/about.viewmodel';
+import { HomeViewModel } from '../viewmodels/home.viewmodel';
 import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
 import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
 import { ForgotPasswordViewModel } from '../viewmodels/user.forgotpassword.viewmodel';
@@ -19,6 +20,7 @@ import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel
         WAW_Application,
         ErrorMessagesControl,
         AboutViewModel,
+        HomeViewModel,
         SignUpViewModel,
         LoginViewModel,
         ForgotPasswordViewModel,
@@ -34,6 +36,7 @@ import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel
       WAW_Application,
       ErrorMessagesControl,
       AboutViewModel,
+      HomeViewModel,
       SignUpViewModel,
       LoginViewModel,
       ForgotPasswordViewModel,

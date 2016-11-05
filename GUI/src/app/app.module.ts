@@ -1,43 +1,44 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { IonicApp, IonicModule } from 'ionic-angular';
-import { ControlMessages } from '../components/controlmessages.component';
-// import services
+import { WAW_Application } from './app.component';
+// Import Components
+import { ControlMessagesComponent } from '../components/controlmessages.component';
+// Import services
 import { ValidationService } from '../services/validation.service';
-// import components
-import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { SignUpComponent } from '../components/signup.component';
-import { LoginPage } from '../pages/users/login/login';
-import { ForgotPasswordPage } from '../pages/users/forgotpassword/forgotpassword';
-import { EditUserPage } from '../pages/users/edituser/edituser';
-import { ViewListUserPage } from '../pages/users/viewlistuser/viewlistuser';
+// Import view models
+import { AboutViewModel } from '../viewmodels/about.viewmodel';
+import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
+import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
+import { ForgotPasswordViewModel } from '../viewmodels/user.forgotpassword.viewmodel';
+import { EditUserViewModel } from '../viewmodels/user.edituser.viewmodel';
+import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
 
 @NgModule({
-  declarations: [
-    ControlMessages,
-    MyApp,
-    AboutPage,
-    SignUpComponent,
-    LoginPage,
-    ForgotPasswordPage,
-    EditUserPage,
-    ViewListUserPage
-  ],
+    declarations: [
+        WAW_Application,
+        AboutViewModel,
+        SignUpViewModel,
+        LoginViewModel,
+        ForgotPasswordViewModel,
+        EditUserViewModel,
+        ViewListUserViewModel
+    ],
   imports: [
-    IonicModule.forRoot(MyApp),
-    ReactiveFormsModule
+      IonicModule.forRoot(WAW_Application),
+      ReactiveFormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    AboutPage,
-    SignUpComponent,
-    LoginPage,
-    ForgotPasswordPage,
-    EditUserPage,
-    ViewListUserPage
-  ],
+      WAW_Application,
+      AboutViewModel,
+      SignUpViewModel,
+      LoginViewModel,
+      ForgotPasswordViewModel,
+      EditUserViewModel,
+      ViewListUserViewModel
+    ],
   providers: [ValidationService]
 })
+
 export class AppModule {}

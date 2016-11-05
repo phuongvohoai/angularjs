@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { ValidationService } from '../services/validation.service';
-import { SignUpService } from '../services/signup.service';
+import { SignUpService } from '../services/user.signup.service';
 import { User } from '../models/user.model';
 
 @Component({
@@ -11,18 +11,18 @@ import { User } from '../models/user.model';
     providers: [SignUpService]
 })
 
-export class SignUpComponent {
-    
+export class SignUpViewModel {
+
     private signUpForm: any;
     private newUserJSON: string;
     private user: User;
-    
-    constructor(public navCtrl: NavController, 
-                private fb: FormBuilder, 
+
+    constructor(public navCtrl: NavController,
+                private fb: FormBuilder,
                 private signUpService: SignUpService){
         this.signUpForm = fb.group({
             "displayName": ["", Validators.compose([Validators.required])],
-            "username":["", Validators.compose([Validators.required, 
+            "username":["", Validators.compose([Validators.required,
                                                 Validators.minLength(4)])],
             "password":["", Validators.compose([Validators.required,
                                                 ValidationService.passwordValidator])],
@@ -31,15 +31,15 @@ export class SignUpComponent {
                                             ValidationService.emailValidator])]
         });
     }
-    
+
     createNewAccount(user: any) {
         this.user = user as User;
         this.signUpService.postUserAPI(this.user).subscribe(
-                data => this.newUserJSON = JSON.stringify(data), 
-                error => console.log("Error HTTP Post Service"), 
+                data => this.newUserJSON = JSON.stringify(data),
+                error => console.log("Error HTTP Post Service"),
                 () => console.log("Create New Account Done!")
             );
     }
 
-   
+
 }

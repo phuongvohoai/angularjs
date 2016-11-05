@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
     selector: 'page-viewlistuser',
-    templateUrl: '../pages/user/viewlistuser/viewlistuser.html'
+    templateUrl: '../pages/users/viewlistuser/viewlistuser.html'
 })
 export class ViewListUserViewModel {
 

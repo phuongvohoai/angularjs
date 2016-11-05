@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
     selector: 'page-viewpost',
-    templateUrl: './pages/post/viewpost/viewpost.html'
+    templateUrl: '../pages/post/viewpost/viewpost.html'
 })
 
 export class ViewPostViewModel {

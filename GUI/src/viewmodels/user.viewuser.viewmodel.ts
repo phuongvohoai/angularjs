@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
     selector: 'page-viewuser',
-    templateUrl: '../pages/user/viewuser/viewuser.html'
+    templateUrl: '../pages/users/viewuser/viewuser.html'
 })
 export class ViewUserViewModel {
 

@@ -1,45 +1,51 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Validators, FormBuilder } from '@angular/forms';
+import { AlertController } from 'ionic-angular';
 import { ValidationService } from '../services/validation.service';
 import { SignUpService } from '../services/user.signup.service';
-import { User } from '../models/user.model';
 
 @Component({
     selector: 'page-signup',
     templateUrl: '../pages/users/signup/signup.html',
-    providers: [SignUpService]
+    providers: [SignUpService, ValidationService]
 })
 
 export class SignUpViewModel {
 
     private signUpForm: any;
-    private newUserJSON: string;
-    private user: User;
 
-    constructor(public navCtrl: NavController,
-                private fb: FormBuilder,
-                private signUpService: SignUpService){
+    constructor(
+        public navCtrl: NavController,
+        private fb: FormBuilder,
+        private signUpService: SignUpService,
+        private alertCtrl: AlertController)
+    {
         this.signUpForm = fb.group({
             "displayName": ["", Validators.compose([Validators.required])],
-            "username":["", Validators.compose([Validators.required,
-                                                Validators.minLength(4)])],
-            "password":["", Validators.compose([Validators.required,
-                                                ValidationService.passwordValidator])],
-            "confirmPassword":["", Validators.compose([Validators.required])],
-            "email":["", Validators.compose([Validators.required,
-                                            ValidationService.emailValidator])]
+            "username": ["", Validators.compose([Validators.required,
+            Validators.minLength(4)])],
+            "password": ["", Validators.compose([Validators.required,
+            ValidationService.passwordValidator])],
+            "confirmPassword": ["", Validators.compose([Validators.required])],
+            "email": ["", Validators.compose([Validators.required,
+            ValidationService.emailValidator])]
         });
     }
 
     createNewAccount(user: any) {
-        this.user = user as User;
-        this.signUpService.postUserAPI(this.user).subscribe(
-                data => this.newUserJSON = JSON.stringify(data),
-                error => console.log("Error HTTP Post Service"),
-                () => console.log("Create New Account Done!")
-            );
+        let alert = this.alertCtrl.create({
+            title: 'Login successfully',
+            buttons: [{
+                text: 'Welcome to work any where!',
+                handler: () => {
+                    // user has clicked the alert button
+                    // begin the alert's dismiss transition
+                    alert.dismiss();
+                    return false;
+                }
+            }]
+        });
+        alert.present();
     }
-
-
 }

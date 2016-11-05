@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { WAW_Application } from './app.component';
 // Import Components
-import { ControlMessagesComponent } from '../components/controlmessages.component';
+import { ErrorMessagesControl } from '../components/errormessagecontrol.component';
 // Import services
 import { ValidationService } from '../services/validation.service';
 // Import view models
@@ -17,6 +17,7 @@ import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel
 @NgModule({
     declarations: [
         WAW_Application,
+        ErrorMessagesControl,
         AboutViewModel,
         SignUpViewModel,
         LoginViewModel,
@@ -31,6 +32,7 @@ import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel
   bootstrap: [IonicApp],
   entryComponents: [
       WAW_Application,
+      ErrorMessagesControl,
       AboutViewModel,
       SignUpViewModel,
       LoginViewModel,

@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 
 @Component({
     selector: 'page-about',
-    templateUrl: '.about/about.html'
+    templateUrl: '../pages/about/about.html'
 })
 export class AboutViewModel {
 

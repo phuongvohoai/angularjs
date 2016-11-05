@@ -1,11 +1,11 @@
 ﻿import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { ValidationService } from '../../../services/validation.service';
+import { Validators, FormBuilder } from '@angular/forms';
+import { ValidationService } from '../services/validation.service';
 
 @Component({
     selector: 'page-edituser',
-    templateUrl: '../pages/user/edituser/edituser.html'
+    templateUrl: '../pages/users/edituser/edituser.html'
 })
 
 export class EditUserViewModel {

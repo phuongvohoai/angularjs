@@ -1,11 +1,11 @@
 ﻿import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { ValidationService } from '../../../services/validation.service';
+import { Validators, FormBuilder } from '@angular/forms';
+import { ValidationService } from '../services/validation.service'; 
 
 @Component({
     selector: 'page-forgotpassword',
-    templateUrl: '../pages/user/forgotpassword/forgotpassword.html'
+    templateUrl: '../pages/users/forgotpassword/forgotpassword.html'
 })
 
 export class ForgotPasswordViewModel {

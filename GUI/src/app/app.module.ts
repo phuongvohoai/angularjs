@@ -3,7 +3,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { WAW_Application } from './app.component';
 // Import Components
-import { ErrorMessagesControl } from '../components/errormessagecontrol.component';
+import { ErrorMessagesControl } from '../components/error_message_control.component';
 // Import services
 import { ValidationService } from '../services/validation.service';
 // Import view models

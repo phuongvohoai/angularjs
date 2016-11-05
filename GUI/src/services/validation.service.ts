@@ -9,7 +9,6 @@ export class ValidationService {
             'minlength': `Minimum length is ${validatorValue.requiredLength}`,
             'maxlength': `Maximum length is ${validatorValue.requiredLength}`
         };
-
         return config[validatorName];
     }
 

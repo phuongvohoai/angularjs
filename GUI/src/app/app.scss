@@ -1,10 +1,22 @@
 // App Global Sass
 // --------------------------------------------------
 .right {
-        float: right;
+  float: right;
 }
-.msgError{
-        color: red;
-        font-size: 12px;
-        margin: 5px 0px 0px 15px;
+
+// Error message
+.msgError {
+  color: red;
+  font-size: 12px;
+  margin: 5px 0px 0px 15px;
+}
+
+// Alert Control
+.btn-alert {
+  min-width: 30%;
+}
+
+.alert-md >.alert-button >.button-inner {
+  -webkit-justify-content: center;
+  justify-content: center;
 }

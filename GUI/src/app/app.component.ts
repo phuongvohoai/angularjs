@@ -7,6 +7,9 @@ import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
 import { EditUserViewModel } from '../viewmodels/user.edituser.viewmodel';
 import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
 import { HomeViewModel } from '../viewmodels/home.viewmodel';
+import { MyPostViewModel } from '../viewmodels/user.mypost.viewmodel';
+import { MyExecutedJobViewModel } from '../viewmodels/user.myexecutedjob.viewmodel';
+import { AboutViewModel } from '../viewmodels/about.viewmodel';
 import './rxjs-operators';
 // View Models
 import { Constants } from '../constants/constants';
@@ -26,7 +29,7 @@ import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
 })
 export class WAW_Application {
 	@ViewChild(Nav) nav: Nav;
-	rootPage = SignUpViewModel;
+	rootPage = HomeViewModel;
 	pages: Array<{title: string, icon: string, component: any}>;
 
 	constructor(private alertCtrl: AlertController, private platform: Platform, private translate: TranslateService) {
@@ -43,7 +46,9 @@ export class WAW_Application {
 		// used for an example of ngFor and navigation
 		this.pages = [
 			{ title: 'Edit Profile', icon: 'person', component: EditUserViewModel },
-			{ title: 'View List User', icon: 'search', component: ViewListUserViewModel }
+			{ title: 'My post', icon: 'filing', component: MyPostViewModel },
+			{ title: 'My executed job', icon: 'checkmark-circle', component: MyExecutedJobViewModel },
+			{ title: 'About', icon: 'information-circle', component: AboutViewModel }
 		];
 	}
 	openPage(page) {

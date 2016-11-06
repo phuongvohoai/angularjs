@@ -16,6 +16,9 @@ import { ForgotPasswordViewModel } from '../viewmodels/user.forgotpassword.viewm
 import { EditUserViewModel } from '../viewmodels/user.edituser.viewmodel';
 import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
 import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
+import { MyPostViewModel } from '../viewmodels/user.mypost.viewmodel';
+import { MyExecutedJobViewModel } from '../viewmodels/user.myexecutedjob.viewmodel';
+import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
 
 @NgModule({
     declarations: [
@@ -29,7 +32,10 @@ import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
         ForgotPasswordViewModel,
         EditUserViewModel,
         ViewListUserViewModel,
-        AddPostViewModel
+        AddPostViewModel,
+        MyPostViewModel,
+        MyExecutedJobViewModel,
+        NotificationViewModel
     ],
   imports: [
       IonicModule.forRoot(WAW_Application),
@@ -46,7 +52,10 @@ import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
       ForgotPasswordViewModel,
       EditUserViewModel,
       ViewListUserViewModel,
-      AddPostViewModel
+      AddPostViewModel,
+      MyPostViewModel,
+      MyExecutedJobViewModel,
+      NotificationViewModel
     ],
   providers: [ValidationService]
 })

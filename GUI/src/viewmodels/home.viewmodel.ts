@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
 import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
+import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
 import { MenuController } from 'ionic-angular';
 
 @Component({
@@ -12,6 +13,7 @@ export class HomeViewModel {
 
     viewListUserPage = ViewListUserViewModel;
     addPostPage = AddPostViewModel;
+    notificationPage = NotificationViewModel;
 
     constructor(public navCtrl: NavController, public menuCtrl: MenuController) { }
 

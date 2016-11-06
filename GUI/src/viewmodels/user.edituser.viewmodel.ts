@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
 import { ValidationService } from '../services/validation.service';
 
+import { HomeViewModel } from '../viewmodels/home.viewmodel';
+
 @Component({
     selector: 'page-edituser',
     templateUrl: '../pages/users/edituser/edituser.html'
@@ -11,6 +13,7 @@ import { ValidationService } from '../services/validation.service';
 export class EditUserViewModel {
 
     edituserForm: any;
+    homePage = HomeViewModel;
 
     constructor(public navCtrl: NavController, private fb: FormBuilder) {
         this.edituserForm = fb.group({

@@ -6,9 +6,10 @@ import { ValidationService } from '../services/validation.service';
 import { SignUpService } from '../services/user.signup.service';
 import { User } from '../models/user.model';
 import { AlertControl } from '../components/alert_control.component';
+
 @Component({
     selector: 'page-signup',
-    templateUrl: '../pages/users/signup/signup.html',
+    templateUrl: '../pages/users/signup/signup.html',    
     providers: [SignUpService, ValidationService]
 })
 
@@ -20,14 +21,14 @@ export class SignUpViewModel {
     private alertControl: AlertControl;
 
     // Constructor
-    constructor(private navCtrl: NavController, private fb: FormBuilder, private signUpService: SignUpService,  private alertCtrl: AlertController) {
+    constructor(private navCtrl: NavController, private fb: FormBuilder, private signUpService: SignUpService, private alertCtrl: AlertController) {
         this.signUpForm = fb.group({
             "displayName": ["", Validators.compose([Validators.required])],
             "username": ["", Validators.compose([Validators.required,
             Validators.minLength(4)])],
             "password": ["", Validators.compose([Validators.required,
             ValidationService.passwordValidator])],
-            "confirmPassword": ["", Validators.compose([Validators.required])],
+            "confirmPassword": ["", Validators.compose([Validators.required])], 
             "email": ["", Validators.compose([Validators.required,
             ValidationService.emailValidator])]
         });

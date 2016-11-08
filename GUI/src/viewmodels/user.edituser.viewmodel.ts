@@ -1,5 +1,5 @@
 ﻿import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
 import { ValidationService } from '../services/validation.service';
 
@@ -15,7 +15,7 @@ export class EditUserViewModel {
     edituserForm: any;
     homePage = HomeViewModel;
 
-    constructor(public navCtrl: NavController, private fb: FormBuilder) {
+    constructor(public navCtrl: NavController, private fb: FormBuilder, public menuCtrl: MenuController) {
         this.edituserForm = fb.group({
             "displayName": ["", Validators.compose([Validators.required])],
             "gender": [""],
@@ -34,6 +34,9 @@ export class EditUserViewModel {
     onSubmit() {
         console.log("model-based form submitted");
         console.log(this.edituserForm);
+    }
+    openMenu() {
+        this.menuCtrl.open();
     }
 
 }

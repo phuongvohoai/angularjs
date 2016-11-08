@@ -1,11 +1,11 @@
 <ion-header>
-    <ion-navbar>
-        <ion-buttons>
-            <button ion-button icon-only>
+    <ion-navbar color="primary">
+        <ion-buttons left>
+            <button ion-button icon-only (click)="openMenu()">
                 <ion-icon name="menu"></ion-icon>
             </button>
         </ion-buttons>
-        <ion-title>EDIT PROFILE</ion-title>
+        <ion-title>Edit Profile</ion-title>
         <ion-buttons end>
             <button ion-button icon-only [navPush]="homePage">
             <ion-icon name="home"></ion-icon>

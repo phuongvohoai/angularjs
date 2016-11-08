@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController, MenuController } from 'ionic-angular';
 
-import { NavController } from 'ionic-angular';
+import { HomeViewModel } from '../viewmodels/home.viewmodel';
 
 @Component({
     selector: 'page-mypost',
@@ -8,6 +9,11 @@ import { NavController } from 'ionic-angular';
 })
 export class MyPostViewModel {
 
-    constructor(public navCtrl: NavController) {  }
+     homePage = HomeViewModel;
 
+    constructor(public navCtrl: NavController, public menuCtrl: MenuController) {  }
+
+    openMenu() {
+        this.menuCtrl.open();
+    }
 }

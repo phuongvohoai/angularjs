@@ -13,7 +13,9 @@ import { HomeViewModel } from '../viewmodels/home.viewmodel';
 import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
 import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
 import { ForgotPasswordViewModel } from '../viewmodels/user.forgotpassword.viewmodel';
-import { EditUserViewModel } from '../viewmodels/user.edituser.viewmodel';
+import { EditUserTabsViewModel } from '../viewmodels/user.edituser.tabs.viewmodel';
+import { EditUserTab1ViewModel } from '../viewmodels/user.edituser.tab1.viewmodel';
+import { EditUserTab2ViewModel } from '../viewmodels/user.edituser.tab2.viewmodel';
 import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
 import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
 import { MyPostViewModel } from '../viewmodels/user.mypost.viewmodel';
@@ -30,7 +32,9 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
         SignUpViewModel,
         LoginViewModel,
         ForgotPasswordViewModel,
-        EditUserViewModel,
+        EditUserTabsViewModel,
+        EditUserTab1ViewModel,
+        EditUserTab2ViewModel,
         ViewListUserViewModel,
         AddPostViewModel,
         MyPostViewModel,
@@ -50,7 +54,9 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
       SignUpViewModel,
       LoginViewModel,
       ForgotPasswordViewModel,
-      EditUserViewModel,
+      EditUserTabsViewModel,
+      EditUserTab1ViewModel,
+      EditUserTab2ViewModel,
       ViewListUserViewModel,
       AddPostViewModel,
       MyPostViewModel,

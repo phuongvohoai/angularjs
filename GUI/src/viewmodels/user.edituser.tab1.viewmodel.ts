@@ -5,9 +5,6 @@ import { ValidationService } from '../services/validation.service';
 
 import { HomeViewModel } from '../viewmodels/home.viewmodel';
 
-import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
-import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
-
 @Component({
     selector: 'page-editusertab1',
     templateUrl: '../pages/users/edituser/editusertab1/editusertab1.html'

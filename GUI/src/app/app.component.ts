@@ -5,8 +5,6 @@ import { TranslateService, TranslateLoader, TranslateStaticLoader } from "ng2-tr
 import { Http } from "@angular/http";
 import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
 import { EditUserTabsViewModel } from '../viewmodels/user.edituser.tabs.viewmodel';
-import { EditUserTab1ViewModel } from '../viewmodels/user.edituser.tab1.viewmodel';
-import { EditUserTab2ViewModel } from '../viewmodels/user.edituser.tab2.viewmodel';
 import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
 import { HomeViewModel } from '../viewmodels/home.viewmodel';
 import { MyPostViewModel } from '../viewmodels/user.mypost.viewmodel';

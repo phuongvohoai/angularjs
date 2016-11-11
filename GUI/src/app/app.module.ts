@@ -16,6 +16,7 @@ import { ForgotPasswordViewModel } from '../viewmodels/user.forgotpassword.viewm
 import { EditUserTabsViewModel } from '../viewmodels/user.edituser.tabs.viewmodel';
 import { EditUserTab1ViewModel } from '../viewmodels/user.edituser.tab1.viewmodel';
 import { EditUserTab2ViewModel } from '../viewmodels/user.edituser.tab2.viewmodel';
+import { ViewPostViewModel } from '../viewmodels/post.viewpost.viewmodel';
 import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
 import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
 import { MyPostViewModel } from '../viewmodels/user.mypost.viewmodel';
@@ -39,7 +40,8 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
         AddPostViewModel,
         MyPostViewModel,
         MyExecutedJobViewModel,
-        NotificationViewModel
+        NotificationViewModel,
+        ViewPostViewModel
     ],
   imports: [
       IonicModule.forRoot(WAW_Application),
@@ -61,7 +63,8 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
       AddPostViewModel,
       MyPostViewModel,
       MyExecutedJobViewModel,
-      NotificationViewModel
+      NotificationViewModel,
+      ViewPostViewModel
     ],
   providers: [ValidationService]
 })

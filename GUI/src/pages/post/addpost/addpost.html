@@ -1,51 +1,51 @@
 <ion-header>
     <ion-navbar color="primary">
-        <ion-title>POST</ion-title>
+        <ion-title>Add Post</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding="true" class="has-header">
     <ion-item>
         <ion-label color="primary" stacked>Title</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="title"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label color="primary" stacked>Category</ion-label>
         <ion-select [(ngModel)]="category" multiple="true">
-            <ion-option value="c1" selected="true">Category 1</ion-option>
-            <ion-option value="c2">Category 2</ion-option>
-            <ion-option value="c3">Category 3</ion-option>
-            <ion-option value="c4">Category 4</ion-option>
-            <ion-option value="c5">Category 5</ion-option>
+            <ion-option selected="true">Category 1</ion-option>
+            <ion-option>Category 2</ion-option>
+            <ion-option>Category 3</ion-option>
+            <ion-option>Category 4</ion-option>
+            <ion-option>Category 5</ion-option>
         </ion-select>
     </ion-item>
 
     <ion-item>
         <ion-label color="primary" stacked>Type</ion-label>
         <ion-select [(ngModel)]="type" multiple="true">
-            <ion-option value="t1" selected="true">Full-time</ion-option>
-            <ion-option value="t2">Part-time</ion-option>
+            <ion-option selected="true">Full-time</ion-option>
+            <ion-option>Part-time</ion-option>
         </ion-select>
     </ion-item>
 
     <ion-item>
         <ion-label color="primary" stacked>Job Position</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="jobposition"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label color="primary" stacked>Describe</ion-label>
-        <ion-textarea rows="3"></ion-textarea>
+        <ion-textarea rows="3" [(ngModel)]="describe"></ion-textarea>
     </ion-item>
 
     <ion-item>
         <ion-label color="primary" stacked>Cost</ion-label>
         <ion-input type="number"></ion-input>
         <ion-select [(ngModel)]="costtype">
-            <ion-option value="hour" selected="true">hourly</ion-option>
-            <ion-option value="month">monthly</ion-option>
-            <ion-option value="fix">fixed</ion-option>
+            <ion-option selected="true">hourly</ion-option>
+            <ion-option>monthly</ion-option>
+            <ion-option>fixed</ion-option>
         </ion-select>
     </ion-item>
 
@@ -55,5 +55,5 @@
     </ion-item>
 
     <ion-label color="primary">Add photos</ion-label>
-    <button ion-button round class="center">Post</button>
+    <button ion-button round class="center" (click)="addPost()">Post</button>
 </ion-content>

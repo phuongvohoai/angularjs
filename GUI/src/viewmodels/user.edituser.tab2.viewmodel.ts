@@ -30,5 +30,8 @@ export class EditUserTab2ViewModel {
     openMenu() {
         this.menuCtrl.open();
     }
+    openHomePage(){
+        this.navCtrl.push(HomeViewModel);
+    }
 
 }

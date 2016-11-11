@@ -1,5 +1,7 @@
 ﻿import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,NavParams } from 'ionic-angular';
+
+import { ViewPostViewModel } from '../viewmodels/post.viewpost.viewmodel';
 
 @Component({
     selector: 'page-addpost',
@@ -8,10 +10,28 @@ import { NavController } from 'ionic-angular';
 
 export class AddPostViewModel {
 
-    constructor(public navCtrl: NavController) { }
+    title;
+    category;
+    type;
+    jobposition;
+    describe;
+    costtype;
+    applydeadline;
 
-    ionViewDidLoad() {
-        console.log('Hello add post Page');
+    constructor(public navCtrl: NavController, public params:NavParams) { 
+        this.navCtrl = navCtrl;
+        this.params = params;
     }
 
+    addPost(){
+        this.navCtrl.push(ViewPostViewModel,{ titleParam: this.title,
+                                              categoryParam: this.category,
+                                              typeParam: this.type,
+                                              jobpositionParam: this.jobposition,
+                                              describeParam: this.describe,
+                                              costtypeParam: this.costtype,
+                                              applydeadlineParam: this.applydeadline});
+    }
+    
 }
+

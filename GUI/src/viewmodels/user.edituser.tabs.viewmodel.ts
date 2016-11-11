@@ -3,6 +3,7 @@ import { NavController} from 'ionic-angular';
 
 import { EditUserTab1ViewModel } from '../viewmodels/user.edituser.tab1.viewmodel';
 import { EditUserTab2ViewModel } from '../viewmodels/user.edituser.tab2.viewmodel';
+import { HomeViewModel } from '../viewmodels/home.viewmodel';
 
 @Component({
     selector: 'page-editusertabs',
@@ -10,9 +11,15 @@ import { EditUserTab2ViewModel } from '../viewmodels/user.edituser.tab2.viewmode
 })
 export class EditUserTabsViewModel {
 
-    tab1Root: any = EditUserTab1ViewModel;
-    tab2Root: any = EditUserTab2ViewModel;
+    private tab1Root: any ;
+    private tab2Root: any ;
 
-    constructor(public navCtrl: NavController) {  }
+    constructor(public navCtrl: NavController) {  
+        this.tab1Root = EditUserTab1ViewModel;
+        this.tab2Root = EditUserTab2ViewModel;
+    }
+    openHomePage(){
+    
+    }
 
 }

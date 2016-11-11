@@ -22,6 +22,9 @@
         <button ion-button class="right" clear [navPush]="signUpPage">Sign Up</button>
         <button ion-button full color="secondary" type="submit" [navPush]="homePage" [disabled]="!loginForm.valid">Login</button>
     </form>
-    <button ion-button full>Login with Facebook</button>
+    <button ion-button full>
+        <ion-icon name="facebook"></ion-icon>
+        Login with Facebook
+    </button>
     <button ion-button full color="danger">Login with Google+</button>
 </ion-content>

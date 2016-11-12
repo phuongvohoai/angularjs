@@ -40,8 +40,8 @@ export class WAW_Application {
 			Splashscreen.hide();
 
 			// Set default language for app
-			translate.setDefaultLang(Constants.LANGUAGE_EN);
-			translate.use(Constants.LANGUAGE_EN);
+			translate.setDefaultLang(Constants.LANGUAGE_VI);
+			translate.use(Constants.LANGUAGE_VI);
 		});
 		// used for an example of ngFor and navigation
 		this.pages = [

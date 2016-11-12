@@ -1,6 +1,15 @@
+import { ErrorCodes } from '../constants/errorcodes';
+import { TranslateService} from "ng2-translate";
+
 export class ValidationService {
+    private static translate: TranslateService;
+    
+    static setTranslateService(translate: TranslateService) {
+        this.translate = translate;
+    }
+
     static getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
-        let config = {
+        /*let config = {
             'required': 'This field is required',
             'invalidCreditCard': 'Is invalid credit card number',
             'invalidUsername': 'Invalid username',
@@ -10,7 +19,9 @@ export class ValidationService {
             'minlength': `Must be at least ${validatorValue.requiredLength} characters`,
             'maxlength': `Must not be more than ${validatorValue.requiredLength} characters`
         };
-        return config[validatorName];
+        
+        return config[validatorName];*/
+        this.translate.get(validatorName);
     }
 
     static creditCardValidator(control) {
@@ -18,7 +29,7 @@ export class ValidationService {
         if (control.value.match(/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/)) {
             return null;
         } else {
-            return { 'invalidCreditCard': true };
+            return ErrorCodes.Required;
         }
     }
 

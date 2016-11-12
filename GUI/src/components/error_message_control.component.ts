@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ValidationService } from '../services/validation.service';
+import { TranslateService} from "ng2-translate";
 
 @Component({
     selector: 'control-messages',
@@ -18,6 +19,8 @@ export class ErrorMessagesControl {
         return null;
     }
 
-    constructor() { }
+    constructor(public translate: TranslateService) {
+        ValidationService.setTranslateService(translate);
+    }
 }
 

@@ -1,9 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>JOB</ion-title>
-  </ion-navbar>
+    <ion-navbar color="primary">
+        <ion-title>View Post</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding="true" class="has-header">
+    <ion-label color="primary" stacked>Title</ion-label>
+    <p>{{titleParam}}</p>
 
+    <ion-label color="primary" stacked>Category</ion-label>
+    <p>{{categoryParam}}</p>
+
+    <ion-label color="primary" stacked>Type</ion-label>
+    <p>{{typeParam}}</p>
+
+    <ion-label color="primary" stacked>Job Position</ion-label>
+    <p>{{jobpositionParam}}</p>
+
+    <ion-label color="primary" stacked>Describe</ion-label>
+    <p>{{describeParam}}</p>
+
+    <ion-label color="primary" stacked>Cost</ion-label>
+    <p>{{costtypeParam}}</p>
+
+    <ion-label color="primary" stacked>Apply Deadline</ion-label>
+    <p>{{applydeadlineParam}}</p>
 </ion-content>

@@ -1,20 +1,19 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 
 import { HomeViewModel } from '../viewmodels/home.viewmodel';
 
 @Component({
-    selector: 'page-about',
-    templateUrl: '../pages/about/about.html'
+    selector: 'page-mypost',
+    templateUrl: '../pages/users/mypost/mypost.html'
 })
-export class AboutViewModel {
+export class MyPostViewModel {
 
-    homePage = HomeViewModel;
+     homePage = HomeViewModel;
 
     constructor(public navCtrl: NavController, public menuCtrl: MenuController) {  }
 
     openMenu() {
         this.menuCtrl.open();
     }
-
 }

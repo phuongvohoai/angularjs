@@ -16,12 +16,13 @@ export class LoginViewModel {
     forgotPasswordPage = ForgotPasswordViewModel;
     signUpPage = SignUpViewModel;
     homePage = HomeViewModel;
-
+    
     constructor(public navCtrl: NavController, private fb: FormBuilder) {
         this.loginForm = fb.group({
             "username": ["", Validators.compose([Validators.required])],
             "password": ["", Validators.compose([Validators.required])]
         });
+        
     }
 
     onSubmit() {

@@ -26,6 +26,8 @@ export class SignUpViewModel {
             "username": ["", Validators.compose([Validators.required,
             Validators.minLength(4)])],
             "password": ["", Validators.compose([Validators.required,
+            Validators.minLength(6),
+            Validators.maxLength(10),
             ValidationService.passwordValidator])],
             "confirmPassword": ["", Validators.compose([Validators.required])], 
             "email": ["", Validators.compose([Validators.required,

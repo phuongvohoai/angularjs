@@ -3,6 +3,6 @@
         "Title": "Sign up"
     },
     "ErrorCodes": {
-        "required": "acv"
+        "required": "Required"
     }
 }

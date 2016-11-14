@@ -4,7 +4,7 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { WAW_Application } from './app.component';
 // Import Components
 import { ErrorMessagesControl } from '../components/error_message_control.component';
-import { TranslatePipe } from "ng2-translate";
+import { TranslatePipe, TranslateService } from "ng2-translate";
 // Import services
 import { ValidationService } from '../services/validation.service';
 // Import view models
@@ -66,7 +66,7 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
       NotificationViewModel,
       ViewPostViewModel
     ],
-  providers: [ValidationService]
+  providers: [ValidationService, TranslateService]
 })
 
 export class AppModule {}

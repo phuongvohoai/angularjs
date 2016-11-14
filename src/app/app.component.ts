@@ -29,7 +29,7 @@ import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
 })
 export class WAW_Application {
 	@ViewChild(Nav) nav: Nav;
-	rootPage = LoginViewModel;
+	rootPage = SignUpViewModel;
 	pages: Array<{title: string, icon: string, component: any}>;
 
 	constructor(private alertCtrl: AlertController, private platform: Platform, private translate: TranslateService) {

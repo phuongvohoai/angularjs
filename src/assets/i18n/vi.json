@@ -3,7 +3,11 @@
         "Title": "Đăng ký tài khoản"
     },
     "ErrorCodes": {
-        "required": "Bắt buộc"
+        "required": "Bắt buộc",
+        "minlength": "Must be at least 10 characters",
+        "maxlength": "",
+        "InvalidUsername": "Tên tài khoản không hợp lệ",
+        "InvalidEmail": "Địa chỉ email không hợp lệ"
     }
 
 }

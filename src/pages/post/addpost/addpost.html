@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Add Post</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" class="has-header">
+    <ion-item>
+        <ion-label color="primary" stacked>Title</ion-label>
+        <ion-input [(ngModel)]="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>Category</ion-label>
+        <ion-select [(ngModel)]="category" multiple="true">
+            <ion-option selected="true">Category 1</ion-option>
+            <ion-option>Category 2</ion-option>
+            <ion-option>Category 3</ion-option>
+            <ion-option>Category 4</ion-option>
+            <ion-option>Category 5</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>Type</ion-label>
+        <ion-select [(ngModel)]="type" multiple="true">
+            <ion-option selected="true">Full-time</ion-option>
+            <ion-option>Part-time</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>Job Position</ion-label>
+        <ion-input [(ngModel)]="jobposition"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>Describe</ion-label>
+        <ion-textarea rows="3" [(ngModel)]="describe"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>Cost</ion-label>
+        <ion-input type="number"></ion-input>
+        <ion-select [(ngModel)]="costtype">
+            <ion-option selected="true">hourly</ion-option>
+            <ion-option>monthly</ion-option>
+            <ion-option>fixed</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>Apply Deadline</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="applydeadline"></ion-datetime>
+    </ion-item>
+
+    <ion-label color="primary">Add photos</ion-label>
+    <button ion-button round class="center" (click)="addPost()">Post</button>
+</ion-content>

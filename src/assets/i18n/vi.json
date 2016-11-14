@@ -1,0 +1,9 @@
+{
+    "SignUp": {
+        "Title": "Đăng ký tài khoản"
+    },
+    "ErrorCodes": {
+        "required": "Bắt buộc"
+    }
+
+}

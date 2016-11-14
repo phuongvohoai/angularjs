@@ -1,0 +1,8 @@
+{
+    "SignUp": {
+        "Title": "Sign up"
+    },
+    "ErrorCodes": {
+        "required": "acv"
+    }
+}

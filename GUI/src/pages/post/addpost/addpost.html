@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{"Post.Title" | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- Title -->
+<ion-content padding="true" class="has-header">
+  <ion-grid>
+    <ion-row>
+      <ion-item>
+        <ion-label color="primary" stacked>{{"Post.PostTitle" | translate}}</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-row>
+    <!-- Category -->
+    <ion-row>
+      <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Category" | translate}}</ion-label>
+        <ion-select multiple="true" cancelText="{{Global.Cancel}}" okText="{{Global.Select}}">
+            <ion-option *ngFor="let category of categories" [(ngModel)]="category" value="category.value">
+                {{category.value}}
+            </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-row>
+    <!-- Description -->
+    <ion-row>
+      <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Description" | translate}}</ion-label>
+        <ion-textarea rows="3"></ion-textarea>
+      </ion-item>
+    </ion-row>
+    <!-- Type: Part-time or full-time -->
+    <ion-row>
+      <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Type" | translate}}</ion-label>
+        <ion-select [(ngModel)]="type" multiple="true">
+          <ion-option value="t1" selected="true">Full-time</ion-option>
+          <ion-option value="t2">Part-time</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-row>
+    <!-- Location -->
+    <ion-row>
+      <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Location" | translate}}</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-row>
+    <ion-row>
+      <!-- Cost -->
+      <ion-col width-67>
+        <ion-item>
+          <ion-label color="primary" stacked>{{"Post.Cost" | translate}}</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+      <!-- Units -->
+      <ion-col width-33>
+        <ion-item>
+          <ion-label color="primary" stacked>{{"Global.Units" | translate}}</ion-label>
+          <ion-select [(ngModel)]="costtype">
+            <ion-option value="hour" selected="true">hourly</ion-option>
+            <ion-option value="month">monthly</ion-option>
+            <ion-option value="fix">fixed</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <!-- Expried -->
+    <ion-row>
+      <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Expried" | translate}}</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="applydeadline"></ion-datetime>
+      </ion-item>
+    </ion-row>
+    <!-- Photo -->
+    <ion-row>
+      <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Photo" | translate}}</ion-label>
+      </ion-item>
+    </ion-row>
+    <!-- Submit -->
+    <ion-row class="row-submit">
+      <button ion-button outline class="center">
+        <ion-icon name="ios-create-outline"></ion-icon>
+          {{"Post.Submit" | translate}}
+	    </button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

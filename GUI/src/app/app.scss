@@ -3,7 +3,14 @@
 .right {
   float: right;
 }
-
+.row-submit {
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+  }
+  ion-icon {
+    margin-right: 4px;
+  }
 // Error message
 .msgError {
   color: red;

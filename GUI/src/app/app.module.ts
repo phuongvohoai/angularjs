@@ -15,6 +15,7 @@ import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
 import { ForgotPasswordViewModel } from '../viewmodels/user.forgotpassword.viewmodel';
 import { EditUserViewModel } from '../viewmodels/user.edituser.viewmodel';
 import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
+import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
 
 @NgModule({
     declarations: [
@@ -27,7 +28,8 @@ import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel
         LoginViewModel,
         ForgotPasswordViewModel,
         EditUserViewModel,
-        ViewListUserViewModel
+        ViewListUserViewModel,
+        AddPostViewModel
     ],
   imports: [
       IonicModule.forRoot(WAW_Application),
@@ -43,9 +45,10 @@ import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel
       LoginViewModel,
       ForgotPasswordViewModel,
       EditUserViewModel,
-      ViewListUserViewModel
+      ViewListUserViewModel,
+      AddPostViewModel
     ],
   providers: [ValidationService]
 })
 
-export class AppModule {}
+export class AppModule { }

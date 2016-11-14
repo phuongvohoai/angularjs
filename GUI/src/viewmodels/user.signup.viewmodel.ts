@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
-import { AlertController } from 'ionic-angular';
 import { ValidationService } from '../services/validation.service';
 import { SignUpService } from '../services/user.signup.service';
 import { User } from '../models/user.model';
@@ -21,7 +20,7 @@ export class SignUpViewModel {
     private alertControl: AlertControl;
 
     // Constructor
-    constructor(private navCtrl: NavController, private fb: FormBuilder, private signUpService: SignUpService, private alertCtrl: AlertController) {
+    constructor(private navCtrl: NavController, private fb: FormBuilder, private signUpService: SignUpService) {
         this.signUpForm = fb.group({
             "displayName": ["", Validators.compose([Validators.required])],
             "username": ["", Validators.compose([Validators.required,
@@ -32,7 +31,7 @@ export class SignUpViewModel {
             "email": ["", Validators.compose([Validators.required,
             ValidationService.emailValidator])]
         });
-        this.alertControl = new AlertControl(this.navCtrl, this.alertCtrl);
+        this.alertControl = new AlertControl(this.navCtrl);
     }
 
     // Create new account method

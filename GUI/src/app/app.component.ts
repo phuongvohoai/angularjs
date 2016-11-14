@@ -7,6 +7,7 @@ import './rxjs-operators';
 // View Models
 import { Constants } from '../constants/constants';
 import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
+import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
 
 @Component({
 	template: `<ion-nav [root]="rootPage"></ion-nav>`,
@@ -20,7 +21,7 @@ import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
 	]
 })
 export class WAW_Application {
-	rootPage = SignUpViewModel;
+	rootPage = AddPostViewModel;
 
 	constructor(private alertCtrl: AlertController, private platform: Platform, private translate: TranslateService) {
 		platform.ready().then(() => {
@@ -30,8 +31,8 @@ export class WAW_Application {
 			Splashscreen.hide();
 
 			// Set default language for app
-			translate.setDefaultLang(Constants.LANGUAGE_EN);
-			translate.use(Constants.LANGUAGE_EN);
+			translate.setDefaultLang(Constants.LANGUAGE_VI);
+			translate.use(Constants.LANGUAGE_VI);
 		});
 	}
 }

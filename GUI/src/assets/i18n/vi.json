@@ -1,5 +1,26 @@
 {
-    "SignUp": {
-        "Title": "Đăng ký tài khoản"
-    }
+  "SignUp": {
+    "Title": "Đăng ký tài khoản"
+  },
+  "Post": {
+    "Title": "Tạo tin mới",
+    "PostTitle": "Bạn có công việc gì?",
+    "WorkerTitle": "Bạn muốn làm việc gì?",
+    "Category": "Loại công việc",
+    "Type": "Hình thức làm việc",
+    "Type_PartTime": "Bán thời gian",
+    "Type_FullTime": "Toàn thời gian",
+    "Location": "Vị trí",
+    "Description": "Mô tả",
+    "Cost": "Chi phí",
+    "Expried": "Ngày hết hạn",
+    "Photo": "Hình ảnh",
+    "Submit": "Đăng tin"
+  },
+  "Global": {
+    "Units": "Đơn vị",
+    "Select": "Chọn",
+    "Cancel": "Hủy",
+    "OK": "Đồng ý"
+  }
 }

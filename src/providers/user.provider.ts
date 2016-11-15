@@ -7,7 +7,6 @@ export class UserProvider {
 
 	public Users = new List<IUser>();
 
-
 	/**
 	 * Creates an instance of UserProvider.
 	 * 
@@ -92,8 +91,6 @@ export class UserProvider {
 		this.Users.Add(user3);
 		this.Users.Add(user4);
 		this.Users.Add(user5);
-
-
 	}
 
 }

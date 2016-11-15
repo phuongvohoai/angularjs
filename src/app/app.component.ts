@@ -3,17 +3,15 @@ import { Nav, Platform, AlertController } from "ionic-angular";
 import { StatusBar, Splashscreen } from "ionic-native";
 import { TranslateService, TranslateLoader, TranslateStaticLoader } from "ng2-translate";
 import { Http } from "@angular/http";
-import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
-import { EditUserTabsViewModel } from '../viewmodels/user.edituser.tabs.viewmodel';
-import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
-import { HomeViewModel } from '../viewmodels/home.viewmodel';
-import { MyPostViewModel } from '../viewmodels/user.mypost.viewmodel';
-import { MyExecutedJobViewModel } from '../viewmodels/user.myexecutedjob.viewmodel';
-import { AboutViewModel } from '../viewmodels/about.viewmodel';
 import './rxjs-operators';
 // View Models
 import { Constants } from '../constants/constants';
-import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
+//import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
+import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
+import { EditUserTabsViewModel } from '../viewmodels/user.edituser.tabs.viewmodel';
+import { MyPostViewModel } from '../viewmodels/user.mypost.viewmodel';
+import { MyExecutedJobViewModel } from '../viewmodels/user.myexecutedjob.viewmodel';
+import { AboutViewModel } from '../viewmodels/about.viewmodel';
 
 @Component({
 	template: `<ion-nav [root]="rootPage"></ion-nav>`,
@@ -29,7 +27,7 @@ import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
 })
 export class WAW_Application {
 	@ViewChild(Nav) nav: Nav;
-	rootPage = SignUpViewModel;
+	rootPage = LoginViewModel;
 	pages: Array<{title: string, icon: string, component: any}>;
 
 	constructor(private alertCtrl: AlertController, private platform: Platform, private translate: TranslateService) {

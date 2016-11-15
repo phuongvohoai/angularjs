@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
-import { ValidationService } from '../services/validation.service';
-
 import { HomeViewModel } from '../viewmodels/home.viewmodel';
 
 @Component({

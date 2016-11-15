@@ -1,8 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
-
 @Component({
     selector: 'page-viewpost',
     templateUrl: '../pages/post/viewpost/viewpost.html'

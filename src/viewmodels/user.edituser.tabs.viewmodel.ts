@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController} from 'ionic-angular';
-
 import { EditUserTab1ViewModel } from '../viewmodels/user.edituser.tab1.viewmodel';
 import { EditUserTab2ViewModel } from '../viewmodels/user.edituser.tab2.viewmodel';
-import { HomeViewModel } from '../viewmodels/home.viewmodel';
 
 @Component({
     selector: 'page-editusertabs',

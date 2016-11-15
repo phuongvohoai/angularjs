@@ -31,7 +31,7 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
         AboutViewModel,
         HomeViewModel,
         SignUpViewModel,
-        LoginViewModel,
+        LoginViewModel, 
         ForgotPasswordViewModel,
         EditUserTabsViewModel,
         EditUserTab1ViewModel,
@@ -41,7 +41,7 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
         MyPostViewModel,
         MyExecutedJobViewModel,
         NotificationViewModel,
-        ViewPostViewModel
+        ViewPostViewModel        
     ],
   imports: [
       IonicModule.forRoot(WAW_Application),

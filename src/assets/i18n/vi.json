@@ -2,6 +2,16 @@
     "SignUp": {
         "Title": "Đăng ký tài khoản"
     },
+    "Login":{
+        "Title": "Đăng nhập",
+        "Username": "Tên đăng nhập",
+        "Password": "Mật khẩu",
+        "Login": "Đăng Nhập",
+        "LoginViaFacebook": "Đăng nhập bằng Facebook",
+        "LoginViaGoogle": "Đăng nhập bằng Google+",
+        "ForgotPassword": "Quên mật khẩu",
+        "SignUp": "Chưa có tài khoản?"
+    },
     "ErrorCodes": {
         "required": "Bắt buộc",
         "minlength": "Must be at least 10 characters",

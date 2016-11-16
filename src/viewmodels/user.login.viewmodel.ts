@@ -50,6 +50,7 @@ export class LoginViewModel {
             console.log(this.loginForm.controls.password.value);
             if (this.userProvider.Login(this.loginForm.controls.username.value, this.loginForm.controls.password.value)) {
                 alert("Login successfully.");
+                this.navCtrl.push(HomeViewModel);
             }
             else {
                 alert("Login failed.");

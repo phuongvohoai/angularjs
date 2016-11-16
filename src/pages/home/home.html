@@ -23,18 +23,18 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-item>
+    <button ion-item [navPush]="viewPostPage">
         <ion-thumbnail item-left>
             <img src="/assets/images/default_user.png">
         </ion-thumbnail>
-        <h2>Pretty Hate Machine</h2>
-        <p>Nine Inch Nails</p>
-    </ion-item>
-    <ion-item>
+        <h2>{{titleParam}}</h2>
+        <p>{{describeParam}}</p>
+    </button>
+    <button ion-item>
         <ion-thumbnail item-left>
             <img src="/assets/images/default_user.png">
         </ion-thumbnail>
-        <h2>Pretty Hate Machine</h2>
-        <p>Nine Inch Nails</p>
-    </ion-item>
+        <h2>ABC</h2>
+        <p>DEF</p>
+    </button>
 </ion-content>

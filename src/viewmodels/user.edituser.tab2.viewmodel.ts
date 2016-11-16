@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, MenuController } from 'ionic-angular';
+import { NavController, MenuController, App } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
 import { HomeViewModel } from '../viewmodels/home.viewmodel';
 
@@ -13,7 +13,7 @@ export class EditUserTab2ViewModel {
     edituserForm: any;
     homePage = HomeViewModel;
 
-    constructor(public navCtrl: NavController, private fb: FormBuilder, public menuCtrl: MenuController) {
+    constructor(public navCtrl: NavController, private fb: FormBuilder, public menuCtrl: MenuController, private app:App) {
         this.edituserForm = fb.group({
             "about": ["", Validators.compose([Validators.required])],
             "category": [""],
@@ -29,7 +29,7 @@ export class EditUserTab2ViewModel {
         this.menuCtrl.open();
     }
     openHomePage(){
-        this.navCtrl.push(HomeViewModel);
+        this.app.getRootNav().push(HomeViewModel);
     }
 
 }

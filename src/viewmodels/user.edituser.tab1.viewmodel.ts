@@ -1,5 +1,5 @@
-﻿import { Component, ViewChild } from '@angular/core';
-import { Nav, NavController, MenuController } from 'ionic-angular';
+﻿import { Component } from '@angular/core';
+import { NavController, MenuController, App } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
 import { ValidationService } from '../services/validation.service';
 
@@ -11,14 +11,11 @@ import { HomeViewModel } from '../viewmodels/home.viewmodel';
 })
 
 export class EditUserTab1ViewModel {
-     @ViewChild(Nav) nav: Nav;
 
     edituserForm: any;
     homePage: any = HomeViewModel;
-    ext_page: any;
 
-    constructor(public navCtrl: NavController, private fb: FormBuilder, public menuCtrl: MenuController) {
-        this.ext_page = { component: HomeViewModel };
+    constructor(public navCtrl: NavController, private fb: FormBuilder, public menuCtrl: MenuController, private app:App) {
         this.edituserForm = fb.group({
             "displayName": ["", Validators.compose([Validators.required])],
             "gender": [""],
@@ -39,7 +36,7 @@ export class EditUserTab1ViewModel {
         this.menuCtrl.open();
     }
     openHomePage(){
-        this.navCtrl.push(HomeViewModel);
+        this.app.getRootNav().push(HomeViewModel);
     }
 
 }

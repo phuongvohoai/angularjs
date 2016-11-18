@@ -43,10 +43,10 @@ export class WAW_Application {
 		});
 		// used for an example of ngFor and navigation
 		this.pages = [
-			{ title: 'Edit Profile', icon: 'person', component: EditUserTabsViewModel },
-			{ title: 'My post', icon: 'filing', component: MyPostViewModel },
-			{ title: 'My executed job', icon: 'checkmark-circle', component: MyExecutedJobViewModel },
-			{ title: 'About', icon: 'information-circle', component: AboutViewModel }
+			{ title: 'Chỉnh sử hồ sơ', icon: 'person', component: EditUserTabsViewModel },
+			{ title: 'Bài đăng của tôi', icon: 'filing', component: MyPostViewModel },
+			{ title: 'Công việc của tôi', icon: 'checkmark-circle', component: MyExecutedJobViewModel },
+			{ title: 'Giới thiệu', icon: 'information-circle', component: AboutViewModel }
 		];
 	}
 	openPage(page) {

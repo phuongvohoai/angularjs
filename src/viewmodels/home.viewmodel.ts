@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, MenuController } from 'ionic-angular';
+import { NavController, MenuController, App } from 'ionic-angular';
 import { ViewListUserViewModel } from '../viewmodels/user.viewlistuser.viewmodel';
 import { AddPostViewModel } from '../viewmodels/post.addpost.viewmodel';
 import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
@@ -15,9 +15,7 @@ import { Post } from '../models/post.model';
 export class HomeViewModel {
 
     viewListUserPage = ViewListUserViewModel;
-    addPostPage = AddPostViewModel;
     viewPostPage = ViewPostViewModel;
-    notificationPage = NotificationViewModel;
 
     post: Post;
     posts: any[];
@@ -26,7 +24,7 @@ export class HomeViewModel {
     public describeParam: any;
     
 
-    constructor(public navCtrl: NavController, public menuCtrl: MenuController, private postProvider: PostProvider) {
+    constructor(public navCtrl: NavController, public menuCtrl: MenuController, private postProvider: PostProvider, private app:App) {
         //this.titleParams = [this.postProvider.ViewPost(0).title, this.postProvider.ViewPost(1).title];
         //this.describeParam = this.postProvider.ViewPost(0).describe;
         this.posts = [this.postProvider.ViewPost(0), this.postProvider.ViewPost(1), this.postProvider.ViewPost(2)];
@@ -37,7 +35,13 @@ export class HomeViewModel {
         this.menuCtrl.open();
     }
     viewPost(){
-        this.navCtrl.push(ViewPostViewModel);
+        this.app.getRootNav().push(ViewPostViewModel);
+    }
+    viewAddPost(){
+        this.app.getRootNav().push(AddPostViewModel);
+    }
+    viewNotification(){
+        this.app.getRootNav().push(NotificationViewModel);
     }
 
 }

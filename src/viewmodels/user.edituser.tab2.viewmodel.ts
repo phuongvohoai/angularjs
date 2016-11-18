@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController, App } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
-import { HomeViewModel } from '../viewmodels/home.viewmodel';
+import { HomeTabsViewModel } from '../viewmodels/home.tabs.viewmodel';
 
 @Component({
     selector: 'page-editusertab2',
@@ -11,7 +11,7 @@ import { HomeViewModel } from '../viewmodels/home.viewmodel';
 export class EditUserTab2ViewModel {
 
     edituserForm: any;
-    homePage = HomeViewModel;
+    homePage = HomeTabsViewModel;
 
     constructor(public navCtrl: NavController, private fb: FormBuilder, public menuCtrl: MenuController, private app:App) {
         this.edituserForm = fb.group({
@@ -29,7 +29,7 @@ export class EditUserTab2ViewModel {
         this.menuCtrl.open();
     }
     openHomePage(){
-        this.app.getRootNav().push(HomeViewModel);
+        this.app.getRootNav().push(HomeTabsViewModel);
     }
 
 }

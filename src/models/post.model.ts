@@ -8,4 +8,6 @@ export class Post implements IPost {
     describe: string;
     cost: number;
     applyDeadline: string;
+    distance: number;
+    status: string;
 }   

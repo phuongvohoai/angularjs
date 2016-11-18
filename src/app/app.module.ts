@@ -9,6 +9,7 @@ import { TranslatePipe, TranslateService } from "ng2-translate";
 import { ValidationService } from '../services/validation.service';
 // Import view models
 import { AboutViewModel } from '../viewmodels/about.viewmodel';
+import { HomeTabsViewModel } from '../viewmodels/home.tabs.viewmodel';
 import { HomeViewModel } from '../viewmodels/home.viewmodel';
 import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
 import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
@@ -41,7 +42,8 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
         MyPostViewModel,
         MyExecutedJobViewModel,
         NotificationViewModel,
-        ViewPostViewModel        
+        ViewPostViewModel,
+        HomeTabsViewModel        
     ],
   imports: [
       IonicModule.forRoot(WAW_Application),
@@ -64,7 +66,8 @@ import { NotificationViewModel } from '../viewmodels/notification.viewmodel';
       MyPostViewModel,
       MyExecutedJobViewModel,
       NotificationViewModel,
-      ViewPostViewModel
+      ViewPostViewModel,
+      HomeTabsViewModel
     ],
   providers: [ValidationService, TranslateService]
 })

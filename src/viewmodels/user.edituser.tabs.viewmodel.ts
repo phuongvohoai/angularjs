@@ -16,8 +16,4 @@ export class EditUserTabsViewModel {
         this.tab1Root = EditUserTab1ViewModel;
         this.tab2Root = EditUserTab2ViewModel;
     }
-    openHomePage(){
-    
-    }
-
 }

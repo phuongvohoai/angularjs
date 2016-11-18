@@ -23,6 +23,7 @@
 </ion-header>
 
 <ion-content padding>
+    <!--
     <button ion-item [navPush]="viewPostPage">
         <ion-thumbnail item-left>
             <img src="/assets/images/default_user.png">
@@ -30,11 +31,57 @@
         <h2>{{titleParam}}</h2>
         <p>{{describeParam}}</p>
     </button>
-    <button ion-item>
-        <ion-thumbnail item-left>
-            <img src="/assets/images/default_user.png">
-        </ion-thumbnail>
-        <h2>ABC</h2>
-        <p>DEF</p>
-    </button>
+    -->
+    <ion-card *ngFor="let post of posts">
+        <ion-card-content (click)="viewPost()">
+            <ion-card-title>
+                {{post.title}}
+            </ion-card-title>
+            <!--
+                <ion-avatar item-left>
+                    <img src="/assets/images/default_user.png">
+                </ion-avatar>
+                -->
+            <ion-row>
+                <ion-label color="primary">Phan Y Biển</ion-label>
+                <ion-label> 30 thg 11 lúc 12:00 </ion-label>
+            </ion-row>
+
+            <p>{{post.describe}}</p>
+        </ion-card-content>
+        <ion-row>
+            <ion-col>
+                <ion-label>
+                    <ion-icon name="pricetag"> {{post.category}}</ion-icon>
+                </ion-label>
+            </ion-col>
+            <ion-col>
+                <ion-label>
+                    <ion-icon name="compass"> {{post.distance}}</ion-icon> km
+                </ion-label>
+            </ion-col>
+            <ion-col>
+                <ion-label>
+                    <ion-icon name="eye" class="right"> 20</ion-icon>
+                </ion-label>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button clear small>
+                    <ion-icon name="thumbs-up"> Thích</ion-icon>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button clear small>
+                    <ion-icon name="share-alt"> Chia sẻ</ion-icon>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button clear small>
+                    <ion-icon name="star-outline"> Lưu</ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
 </ion-content>

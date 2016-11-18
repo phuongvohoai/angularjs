@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 
-import { HomeViewModel } from '../viewmodels/home.viewmodel';
+import { HomeTabsViewModel } from '../viewmodels/home.tabs.viewmodel';
 
 @Component({
     selector: 'page-myexecutedjob',
@@ -9,7 +9,7 @@ import { HomeViewModel } from '../viewmodels/home.viewmodel';
 })
 export class MyExecutedJobViewModel {
 
-    homePage = HomeViewModel;
+    homePage = HomeTabsViewModel;
 
     constructor(public navCtrl: NavController, public menuCtrl: MenuController) {  }
 

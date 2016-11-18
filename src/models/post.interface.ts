@@ -6,4 +6,6 @@ export interface IPost {
     describe: string;
     cost: number;
     applyDeadline: string;
+    distance: number;
+    status: string;
 }   

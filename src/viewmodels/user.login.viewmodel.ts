@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
 import { ForgotPasswordViewModel } from './user.forgotpassword.viewmodel';
 import { SignUpViewModel } from './user.signup.viewmodel';
-import { HomeViewModel } from '../viewmodels/home.viewmodel';
+import { HomeTabsViewModel } from '../viewmodels/home.tabs.viewmodel';
 import { UserProvider } from '../providers/user.provider';
 
 @Component({
@@ -17,7 +17,7 @@ export class LoginViewModel {
     loginForm: any;
     forgotPasswordPage = ForgotPasswordViewModel;
     signUpPage = SignUpViewModel;
-    homePage = HomeViewModel;
+    homePage = HomeTabsViewModel;
 
 
     /**
@@ -50,7 +50,7 @@ export class LoginViewModel {
             console.log(this.loginForm.controls.password.value);
             if (this.userProvider.Login(this.loginForm.controls.username.value, this.loginForm.controls.password.value)) {
                 alert("Login successfully.");
-                this.navCtrl.push(HomeViewModel);
+                this.navCtrl.push(HomeTabsViewModel);
             }
             else {
                 alert("Login failed.");

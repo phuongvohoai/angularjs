@@ -9,10 +9,10 @@
             Home
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only [navPush]="addPostPage">
+            <button ion-button icon-only (click)="viewAddPost()">
                 <ion-icon name="add"></ion-icon>
             </button>
-            <button ion-button icon-only [navPush]="notificationPage">
+            <button ion-button icon-only (click)="viewNotification()">
                 <ion-icon name="notifications"></ion-icon>
             </button>
             <button ion-button icon-only>
@@ -33,7 +33,7 @@
     </button>
     -->
     <ion-card *ngFor="let post of posts">
-        <ion-card-content (click)="viewPost()">
+        <ion-card-content>
             <ion-card-title>
                 {{post.title}}
             </ion-card-title>

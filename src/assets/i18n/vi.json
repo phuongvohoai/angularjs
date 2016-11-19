@@ -1,5 +1,15 @@
-{    
-    "LoginPage":{
+{
+    "SignUp": {
+        "Title": "Đăng ký tài khoản",
+        "DisplayName": "Tên hiển thị",
+        "Username": "Tên tài khoản",
+        "Password": "Mật khẩu",
+        "ConfirmPassword": "Xác nhận mật khẩu",
+        "SignUpViaFacebook": "Đăng ký bằng Facebook",
+        "SignUpViaGoogle": "Đăng ký bằng Google+",
+        "SignUp": "Đăng ký"
+    },
+    "Login": {
         "Title": "Đăng nhập",
         "Username": "Tên tài khoản",
         "Password": "Mật khẩu",
@@ -8,14 +18,6 @@
         "LoginViaGoogle": "Đăng nhập bằng Google+",
         "ForgotPassword": "Quên mật khẩu",
         "SignUp": "Chưa có tài khoản?"
-    },
-    "SignUp": {
-        "Title": "Đăng ký tài khoản",
-        "Displayname": "Tên hiển thị",
-        "Username": "Tên tài khoản",
-        "Password":"Mật khẩu",
-        "ConfirmPassword":"Xác nhận mật khẩu",
-        "SignUp": "Đăng ký"
     },
     "ErrorCodes": {
         "required": "Bắt buộc",
@@ -27,5 +29,43 @@
         "InvalidEmail": "Địa chỉ email không hợp lệ",
         "NotEqualsPassword": "Xác nhận mật khẩu không đúng",
         "InvalidFormat": "Dữ liệu nhập không hợp lệ"
+    },
+    "Menu": {
+        "EditProfile": "Chỉnh sửa hồ sơ",
+        "MyPost": "Bài đăng của tôi",
+        "MyExecutedJob": "Công việc của tôi",
+        "About": "Giới thiệu"
+    },
+    "User": {
+        "Personal": "Thông tin cá nhân",
+        "General": "Thông tin chung",
+        "Name": "Tên",
+        "Gender": "Giới tính",
+        "DOB": "Ngày sinh",
+        "Phone": "Số điện thoại",
+        "Email": "Email",
+        "Address": "Địa chỉ",
+        "About": "Giới thiệu bản thân",
+        "Category": "Loại ngành nghề",
+        "Type": "Loại công việc"
+    },
+    "Post": {
+        "AddPost": "Đăng công việc",
+        "Title": "Tiêu đề",
+        "Category": "Loại ngành nghề",
+        "Type": "Loại công việc",
+        "JobPosition": "Vị trí công việc",
+        "Describe": "Mô tả",
+        "Cost": "Chi phí",
+        "ApplyDeadline": "Hạn nộp hồ sơ",
+        "AddPhoto": "Thêm hình ảnh"
+    },
+    "Notification": {
+        "Title": "Thông báo"
+    },
+    "Button": {
+        "Save": "Lưu",
+        "Post": "Đăng"
     }
+
 }

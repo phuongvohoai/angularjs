@@ -5,7 +5,7 @@
                 <ion-icon name="menu"></ion-icon>
             </button>
         </ion-buttons>
-        <ion-title>Edit Profile</ion-title>
+        <ion-title>{{"Menu.EditProfile" | translate}}</ion-title>
         <ion-buttons end>
             <button ion-button icon-only (click)="openHomePage()">
             <ion-icon name="home"></ion-icon>
@@ -17,13 +17,13 @@
 <ion-content padding>
     <form [formGroup]="edituserForm" (ngSubmit)="onSubmit()">
         <ion-item>
-            <ion-label color="primary" stacked>About</ion-label>
+            <ion-label color="primary" stacked>{{"User.About" | translate}}</ion-label>
             <ion-input type="text" id="about" formControlName="about"></ion-input>
         </ion-item>
         <control-messages [control]="edituserForm.controls.about"></control-messages>
 
         <ion-item>
-            <ion-label color="primary" stacked>Category</ion-label>
+            <ion-label color="primary" stacked>{{"User.Category" | translate}}</ion-label>
             <ion-select [(ngModel)]="category" multiple="true" formControlName="category">
                 <ion-option value="c1">Category 1</ion-option>
                 <ion-option value="c2">Category 2</ion-option>
@@ -35,13 +35,13 @@
         <control-messages [control]="edituserForm.controls.category"></control-messages>
 
         <ion-item>
-            <ion-label color="primary" stacked>Type</ion-label>
+            <ion-label color="primary" stacked>{{"User.Type" | translate}}</ion-label>
             <ion-select [(ngModel)]="type" multiple="true" formControlName="type">
                 <ion-option value="t1">Full-time</ion-option>
                 <ion-option value="t2">Part-time</ion-option>
             </ion-select>
         </ion-item>
         <control-messages [control]="edituserForm.controls.type"></control-messages>
-        <button ion-button round type="submit" [disabled]="!edituserForm.valid">Save</button>
+        <button ion-button round type="submit" [disabled]="!edituserForm.valid">{{"Button.Save"|translate}}</button>
     </form>
 </ion-content>

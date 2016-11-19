@@ -1,13 +1,5 @@
-{
-    "SignUp": {
-        "Title": "Đăng ký tài khoản",
-        "Displayname": "Tên hiển thị",
-        "Username": "Tên tài khoản",
-        "Password":"Mật khẩu",
-        "ConfirmPassword":"Xác nhận mật khẩu",
-        "SignUp": "Đăng ký"
-    },
-    "Login":{
+{    
+    "LoginPage":{
         "Title": "Đăng nhập",
         "Username": "Tên tài khoản",
         "Password": "Mật khẩu",
@@ -16,6 +8,14 @@
         "LoginViaGoogle": "Đăng nhập bằng Google+",
         "ForgotPassword": "Quên mật khẩu",
         "SignUp": "Chưa có tài khoản?"
+    },
+    "SignUp": {
+        "Title": "Đăng ký tài khoản",
+        "Displayname": "Tên hiển thị",
+        "Username": "Tên tài khoản",
+        "Password":"Mật khẩu",
+        "ConfirmPassword":"Xác nhận mật khẩu",
+        "SignUp": "Đăng ký"
     },
     "ErrorCodes": {
         "required": "Bắt buộc",
@@ -28,5 +28,4 @@
         "NotEqualsPassword": "Xác nhận mật khẩu không đúng",
         "InvalidFormat": "Dữ liệu nhập không hợp lệ"
     }
-
 }

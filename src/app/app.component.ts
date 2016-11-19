@@ -6,12 +6,8 @@ import { Http } from "@angular/http";
 import './rxjs-operators';
 // View Models
 import { Constants } from '../constants/constants';
-//import { SignUpViewModel } from '../viewmodels/user.signup.viewmodel';
-import { LoginViewModel } from '../viewmodels/user.login.viewmodel';
-import { EditUserTabsViewModel } from '../viewmodels/user.edituser.tabs.viewmodel';
-import { MyPostViewModel } from '../viewmodels/user.mypost.viewmodel';
-import { MyExecutedJobViewModel } from '../viewmodels/user.myexecutedjob.viewmodel';
-import { AboutViewModel } from '../viewmodels/about.viewmodel';
+import { LoginPage } from '../pages/login/login';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
 	template: `<ion-nav [root]="rootPage"></ion-nav>`,
@@ -19,15 +15,16 @@ import { AboutViewModel } from '../viewmodels/about.viewmodel';
 	providers: [
 		{
 			provide: TranslateLoader,
-			useFactory: (http: Http) => new TranslateStaticLoader(http, '../assets/i18n', '.json'),
+			useFactory: translateStaticLoaderFactory,
 			deps: [Http]
 		},
 		TranslateService
 	]
 })
+
 export class WAW_Application {
 	@ViewChild(Nav) nav: Nav;
-	rootPage = LoginViewModel;
+	rootPage = LoginPage;
 	pages: Array<{title: string, icon: string, component: any}>;
 
 	constructor(private alertCtrl: AlertController, private platform: Platform, private translate: TranslateService) {
@@ -43,15 +40,19 @@ export class WAW_Application {
 		});
 		// used for an example of ngFor and navigation
 		this.pages = [
-			{ title: 'Edit Profile', icon: 'person', component: EditUserTabsViewModel },
+			/*{ title: 'Edit Profile', icon: 'person', component: EditUserTabsViewModel },
 			{ title: 'My post', icon: 'filing', component: MyPostViewModel },
-			{ title: 'My executed job', icon: 'checkmark-circle', component: MyExecutedJobViewModel },
-			{ title: 'About', icon: 'information-circle', component: AboutViewModel }
-		];
+			{ title: 'My executed job', icon: 'checkmark-circle', component: MyExecutedJobViewModel },*/
+			{ title: 'About', icon: 'information-circle', component: AboutPage }
+		];		
 	}
 	openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+}
+
+export function translateStaticLoaderFactory(http: Http) {
+  return new TranslateStaticLoader(http, '../assets/i18n', '.json');
 }

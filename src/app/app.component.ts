@@ -42,8 +42,8 @@ export class WAW_Application {
 		// used for an example of ngFor and navigation
 		this.pages = [
 			{ title: 'Edit Profile', icon: 'person', component: UserPage },
-			//{ title: 'My post', icon: 'filing', component: MyPostViewModel },
-			//{ title: 'My executed job', icon: 'checkmark-circle', component: MyExecutedJobViewModel },
+			{ title: 'My post', icon: 'filing', component: AboutPage },
+			{ title: 'My executed job', icon: 'checkmark-circle', component: AboutPage },
 			{ title: 'About', icon: 'information-circle', component: AboutPage }
 		];		
 	}

@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar color="primary">
         <ion-title>
-            {{ 'SignUp.Title' | translate }}
+            {{ 'Title.SignUp' | translate }}
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -10,37 +10,37 @@
     <form [formGroup]="signUpForm" (ngSubmit)="createNewAccount(signUpForm.value)">
         <!--Display name-->
         <ion-item>
-            <ion-label stacked>Display Name</ion-label>
+            <ion-label stacked>{{'User.DisplayName' | translate}}</ion-label>
             <ion-input type="text" id="displayName" formControlName="displayName"></ion-input>
         </ion-item>
         <control-messages [control]="signUpForm.controls.displayName"></control-messages>
         <!--User name-->
         <ion-item>
-            <ion-label stacked>Username</ion-label>
+            <ion-label stacked>{{'User.Username' | translate}}</ion-label>
             <ion-input type="text" id="username" formControlName="username"></ion-input>
         </ion-item>
         <control-messages [control]="signUpForm.controls.username"></control-messages>
         <!--Email-->
         <ion-item>
-            <ion-label stacked>Email</ion-label>
+            <ion-label stacked>{{'User.Email' | translate}}</ion-label>
             <ion-input type="text" id="email" formControlName="email"></ion-input>
         </ion-item>
         <control-messages [control]="signUpForm.controls.email"></control-messages>
         <!--Password-->
         <ion-item>
-            <ion-label stacked>Password</ion-label>
+            <ion-label stacked>{{'User.Password' | translate}}</ion-label>
             <ion-input type="password" id="password" formControlName="password"></ion-input>
         </ion-item>
         <control-messages [control]="signUpForm.controls.password"></control-messages>
         <!--Confirm Password-->
         <ion-item>
-            <ion-label stacked>Confirm Password</ion-label>
+            <ion-label stacked>{{'User.ConfirmPassword' | translate}}</ion-label>
             <ion-input type="password" id="confirmPassword" formControlName="confirmPassword"></ion-input>
         </ion-item>
         <control-messages [control]="signUpForm.controls.confirmPassword"></control-messages>
         <!--Button Create New Account-->
-        <button ion-button full color="secondary" type="submit" [navPush]="loginPage" [disabled]="!signUpForm.valid">Create New Account</button>
+        <button ion-button full color="secondary" type="submit" [navPush]="loginPage" [disabled]="!signUpForm.valid">{{"Button.SignUp" | translate}}</button>
     </form>
-    <button ion-button full (click)="showAlert()">Register via Facebook</button>
-    <button ion-button full color="danger">Register via Google+</button>
+    <button ion-button full (click)="showAlert()">{{"Button.SignUpViaFacebook" | translate}}</button>
+    <button ion-button full color="danger">{{"Button.SignUpViaGoogle" | translate}}</button>
 </ion-content>

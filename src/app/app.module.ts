@@ -19,6 +19,7 @@ import { PostListPage } from '../pages/post_list/postlist';
 import { UserDetailPage } from '../pages/user_detail/userdetail';
 import { UserPage } from '../pages/user/user';
 import { UserListPage } from '../pages/user_list/userlist';
+import { NotificationPage } from '../pages/notification/notification';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
@@ -35,6 +36,7 @@ import { TabsPage } from '../pages/tabs/tabs';
         UserDetailPage,
         UserPage,
         UserListPage,
+        NotificationPage,
         TabsPage,
         TranslatePipe
     ],
@@ -56,6 +58,7 @@ import { TabsPage } from '../pages/tabs/tabs';
         UserDetailPage,
         UserPage,
         UserListPage,
+        NotificationPage,
         TabsPage
     ],
     providers: [ValidationService, TranslateService]

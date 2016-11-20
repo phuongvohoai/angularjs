@@ -1,23 +1,62 @@
 {
-    "SignUp": {
-        "Title": "Đăng ký tài khoản",
-        "DisplayName": "Tên hiển thị",
-        "Username": "Tên tài khoản",
-        "Password": "Mật khẩu",
-        "ConfirmPassword": "Xác nhận mật khẩu",
-        "SignUpViaFacebook": "Đăng ký bằng Facebook",
-        "SignUpViaGoogle": "Đăng ký bằng Google+",
+    "Title": {
+        "Login": "Đăng nhập",
+        "SignUp": "Đăng ký tài khoản",
+        "ForgotPassword": "Quên mật khẩu",
+        "Home": "Chính",
+        "PostList": "Công việc",
+        "PostDetail": "Chi tiết công việc",
+        "UserList": "Người dùng",
+        "Notification": "Thông báo",
+        "EditProfile": "Chỉnh sửa hồ sơ",
+        "MyPost": "Bài đăng của tôi",
+        "MyExecutedJob": "Công việc của tôi",
+        "About": "Giới thiệu"
+    },
+    "Label": {
+        "ForgotPassword": "Quên mật khẩu?",
         "SignUp": "Đăng ký"
     },
-    "Login": {
-        "Title": "Đăng nhập",
-        "Username": "Tên tài khoản",
-        "Password": "Mật khẩu",
+    "Button": {
         "Login": "Đăng Nhập",
         "LoginViaFacebook": "Đăng nhập bằng Facebook",
         "LoginViaGoogle": "Đăng nhập bằng Google+",
-        "ForgotPassword": "Quên mật khẩu",
-        "SignUp": "Chưa có tài khoản?"
+        "SignUp": "Đăng ký",
+        "SignUpViaFacebook": "Đăng ký bằng Facebook",
+        "SignUpViaGoogle": "Đăng ký bằng Google+",
+        "GetPassword": "Lấy lại mật khẩu",
+        "Post": "Đăng",
+        "Save": "Lưu",
+        "Like": "Thích",
+        "Share": "Chia sẻ"
+    },
+    "User": {
+        "Username": "Tên tài khoản",
+        "Password": "Mật khẩu",
+        "ConfirmPassword": "Xác nhận mật khẩu",
+        "Name": "Tên",
+        "DisplayName": "Tên hiển thị",
+        "Gender": "Giới tính",
+        "DOB": "Ngày sinh",
+        "Phone": "Số điện thoại",
+        "Email": "Email",
+        "Address": "Địa chỉ",
+        "About": "Giới thiệu bản thân",
+        "Category": "Loại ngành nghề",
+        "Type": "Loại công việc"
+    },
+    "Post": {
+        "Title": "Tiêu đề",
+        "Category": "Loại ngành nghề",
+        "Type": "Loại công việc",
+        "JobPosition": "Vị trí công việc",
+        "Describe": "Mô tả",
+        "Cost": "Chi phí",
+        "ApplyDeadline": "Hạn nộp hồ sơ",
+        "AddPhoto": "Thêm hình ảnh"
+    },
+    "Message": {
+        "ForgotPassword": "Nhập địa chỉ email để lấy lại mật khẩu!"
     },
     "ErrorCodes": {
         "required": "Bắt buộc",
@@ -29,43 +68,5 @@
         "InvalidEmail": "Địa chỉ email không hợp lệ",
         "NotEqualsPassword": "Xác nhận mật khẩu không đúng",
         "InvalidFormat": "Dữ liệu nhập không hợp lệ"
-    },
-    "Menu": {
-        "EditProfile": "Chỉnh sửa hồ sơ",
-        "MyPost": "Bài đăng của tôi",
-        "MyExecutedJob": "Công việc của tôi",
-        "About": "Giới thiệu"
-    },
-    "User": {
-        "Personal": "Thông tin cá nhân",
-        "General": "Thông tin chung",
-        "Name": "Tên",
-        "Gender": "Giới tính",
-        "DOB": "Ngày sinh",
-        "Phone": "Số điện thoại",
-        "Email": "Email",
-        "Address": "Địa chỉ",
-        "About": "Giới thiệu bản thân",
-        "Category": "Loại ngành nghề",
-        "Type": "Loại công việc"
-    },
-    "Post": {
-        "AddPost": "Đăng công việc",
-        "Title": "Tiêu đề",
-        "Category": "Loại ngành nghề",
-        "Type": "Loại công việc",
-        "JobPosition": "Vị trí công việc",
-        "Describe": "Mô tả",
-        "Cost": "Chi phí",
-        "ApplyDeadline": "Hạn nộp hồ sơ",
-        "AddPhoto": "Thêm hình ảnh"
-    },
-    "Notification": {
-        "Title": "Thông báo"
-    },
-    "Button": {
-        "Save": "Lưu",
-        "Post": "Đăng"
     }
-
 }

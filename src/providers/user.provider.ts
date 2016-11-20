@@ -17,6 +17,10 @@ export class UserProvider {
 		this.BuildSampleData();
 	}
 
+	public ViewUser(index: number){
+		return this.Users.ElementAt(index);
+	}
+
 	/**
 	 *  Login to system
 	 * 

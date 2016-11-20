@@ -6,6 +6,7 @@ import { PostListPage } from '../post_list/postlist';
 import { PostProvider } from '../../providers/post.provider';
 import { Post } from '../../models/post.model';
 
+import { NotificationPage } from '../notification/notification';
 import { TabsPage } from '../tabs/tabs';
 import { Tab } from '../../models/tab.model';
 
@@ -39,8 +40,11 @@ export class HomePage {
     openMenu() {
         this.menuCtrl.open();
     }
-    viewPost(){
+    viewPostDetail(){
         this.navCtrl.push(PostDetailPage);
+    }
+    viewNotification(){
+        this.navCtrl.push(NotificationPage);
     }
     ionViewLoaded (){
     }

@@ -6,10 +6,10 @@
             </button>
         </ion-buttons>
         <ion-title>
-            Home
+            {{"Title.Home" | translate}}
         </ion-title>
         <ion-buttons end>
-            <button ion-button icon-only (click)="viewAddPost()">
+            <button ion-button icon-only (click)="viewPostDetail()">
                 <ion-icon name="add"></ion-icon>
             </button>
             <button ion-button icon-only (click)="viewNotification()">
@@ -23,5 +23,5 @@
 </ion-header>
 
 <ion-content padding>
-    <page-tabs [arrayTab] = "tabLst"></page-tabs>
+    <page-tabs [arrayTab]="tabLst"></page-tabs>
 </ion-content>

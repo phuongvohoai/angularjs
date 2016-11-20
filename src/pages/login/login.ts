@@ -7,6 +7,7 @@ import { UserProvider } from '../../providers/user.provider';
 import { TabsPage } from '../tabs/tabs';
 import { HomePage } from '../home/home';
 import { PostListPage } from '../post_list/postlist';
+import { UserListPage } from '../user_list/userlist';
 import { Tab } from '../../models/tab.model';
 
 @Component({
@@ -51,13 +52,14 @@ export class LoginPage {
             console.log(this.loginForm.controls.username.value);
             console.log(this.loginForm.controls.password.value);
             // Set list tabs
-            let tabLst: Tab[] = [];
-            tabLst.push(new Tab(HomePage, "Home Page"));
-            tabLst.push(new Tab(PostListPage, "Post List Page"));
+            //let tabLst: Tab[] = [];
+            //tabLst.push(new Tab(PostListPage, "Post List Page"));
+            //tabLst.push(new Tab(UserListPage, "User List Page"));
 
             if (this.userProvider.Login(this.loginForm.controls.username.value, this.loginForm.controls.password.value)) {
                 alert("Login successfully.");
-                this.navCtrl.push(TabsPage, {tabLst});
+                //this.navCtrl.push(TabsPage, {tabLst});
+                this.navCtrl.push(HomePage);
             }
             else {
                 alert("Login failed.");

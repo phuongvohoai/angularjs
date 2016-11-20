@@ -7,6 +7,7 @@ import './rxjs-operators';
 // View Models
 import { Constants } from '../constants/constants';
 import { LoginPage } from '../pages/login/login';
+import { UserPage } from '../pages/user/user';
 import { AboutPage } from '../pages/about/about';
 
 @Component({
@@ -40,9 +41,9 @@ export class WAW_Application {
 		});
 		// used for an example of ngFor and navigation
 		this.pages = [
-			/*{ title: 'Edit Profile', icon: 'person', component: EditUserTabsViewModel },
-			{ title: 'My post', icon: 'filing', component: MyPostViewModel },
-			{ title: 'My executed job', icon: 'checkmark-circle', component: MyExecutedJobViewModel },*/
+			{ title: 'Edit Profile', icon: 'person', component: UserPage },
+			//{ title: 'My post', icon: 'filing', component: MyPostViewModel },
+			//{ title: 'My executed job', icon: 'checkmark-circle', component: MyExecutedJobViewModel },
 			{ title: 'About', icon: 'information-circle', component: AboutPage }
 		];		
 	}

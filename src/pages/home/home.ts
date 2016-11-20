@@ -6,6 +6,9 @@ import { PostListPage } from '../post_list/postlist';
 import { PostProvider } from '../../providers/post.provider';
 import { Post } from '../../models/post.model';
 
+import { TabsPage } from '../tabs/tabs';
+import { Tab } from '../../models/tab.model';
+
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html',
@@ -23,13 +26,14 @@ export class HomePage {
 
     public titleParam: any;
     public describeParam: any;
-    
+    tabLst: Tab[] = [];
 
     constructor(public navCtrl: NavController, public menuCtrl: MenuController, private postProvider: PostProvider) {
         //this.titleParams = [this.postProvider.ViewPost(0).title, this.postProvider.ViewPost(1).title];
         //this.describeParam = this.postProvider.ViewPost(0).describe;
-        this.posts = [this.postProvider.ViewPost(0), this.postProvider.ViewPost(1), this.postProvider.ViewPost(2)];
 
+        this.tabLst.push(new Tab(PostListPage, "Post List Page"));
+        this.tabLst.push(new Tab(UserListPage, "User List Page"));
     }
 
     openMenu() {
@@ -37,6 +41,8 @@ export class HomePage {
     }
     viewPost(){
         this.navCtrl.push(PostDetailPage);
+    }
+    ionViewLoaded (){
     }
 
 }

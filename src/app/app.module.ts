@@ -17,6 +17,7 @@ import { ForgotPasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { PostDetailPage } from '../pages/post_detail/postdetail';
 import { PostListPage } from '../pages/post_list/postlist';
 import { UserDetailPage } from '../pages/user_detail/userdetail';
+import { UserPage } from '../pages/user/user';
 import { UserListPage } from '../pages/user_list/userlist';
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -32,6 +33,7 @@ import { TabsPage } from '../pages/tabs/tabs';
         PostDetailPage,
         PostListPage,
         UserDetailPage,
+        UserPage,
         UserListPage,
         TabsPage,
         TranslatePipe
@@ -52,6 +54,7 @@ import { TabsPage } from '../pages/tabs/tabs';
         PostDetailPage,
         PostListPage,
         UserDetailPage,
+        UserPage,
         UserListPage,
         TabsPage
     ],

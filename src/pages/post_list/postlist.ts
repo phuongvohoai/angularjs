@@ -1,36 +1,23 @@
 ﻿import { Component } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { PostDetailPage } from '../post_detail/postdetail';
+
+import { PostProvider } from '../../providers/post.provider';
+import { Post } from '../../models/post.model';
 
 @Component({
     selector: 'page-postlist',
-    templateUrl: 'postlist.html'
+    templateUrl: 'postlist.html',
+    providers: [PostProvider]
 })
 
 export class PostListPage {
 
-    // What's means?
-    title;
-    category;
-    type;
-    jobposition;
-    describe;
-    costtype;
-    applydeadline;
+    post: Post;
+    posts: any[];
 
-    constructor(public navCtrl: NavController, public params:NavParams) { 
-        this.navCtrl = navCtrl;
-        this.params = params;
-    }
-
-    addPost(){
-        this.navCtrl.push(PostDetailPage,{ titleParam: this.title,
-                                              categoryParam: this.category,
-                                              typeParam: this.type,
-                                              jobpositionParam: this.jobposition,
-                                              describeParam: this.describe,
-                                              costtypeParam: this.costtype,
-                                              applydeadlineParam: this.applydeadline});
+    constructor(public navCtrl: NavController, private postProvider: PostProvider) { 
+        this.posts = [this.postProvider.ViewPost(0), this.postProvider.ViewPost(1), this.postProvider.ViewPost(2)];
     }
     
 }

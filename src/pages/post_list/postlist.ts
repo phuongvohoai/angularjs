@@ -1,24 +1,31 @@
 ﻿import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { PostDetailPage } from '../post_detail/postdetail';
-
-import { PostProvider } from '../../providers/post.provider';
-import { Post } from '../../models/post.model';
+import { NavController, LoadingController } from 'ionic-angular';
+import { PostService } from '../../providers/post-service';
 
 @Component({
     selector: 'page-postlist',
     templateUrl: 'postlist.html',
-    providers: [PostProvider]
+    providers: [PostService]
 })
 
 export class PostListPage {
 
-    post: Post;
     posts: any[];
 
-    constructor(public navCtrl: NavController, private postProvider: PostProvider) { 
-        this.posts = [this.postProvider.ViewPost(0), this.postProvider.ViewPost(1), this.postProvider.ViewPost(2)];
+    constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, private postService: PostService) {
+        this.loadPost();
     }
-    
+
+    loadPost() {
+        this.postService.load()
+            .then(data => {
+                this.posts = data;
+            });
+        let loader = this.loadingCtrl.create({
+            content: "Please wait...",
+            duration: 3000
+        });
+        loader.present();
+    }
 }
 

@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 
 export class AlertControl {
 	
-	constructor(private navCtrl: NavController, 	private alertCtrl: AlertController){ }
+	constructor(private navCtrl: NavController, private alertCtrl: AlertController){ }
 
 	public alertInfo(title: string, message: string) {
 		let alert = this.alertCtrl.create({

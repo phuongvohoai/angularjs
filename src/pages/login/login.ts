@@ -1,14 +1,10 @@
 ﻿import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
 import { ForgotPasswordPage } from '../forgotpassword/forgotpassword';
 import { SignUpPage } from '../signup/signup';
 import { UserProvider } from '../../providers/user.provider';
-import { TabsPage } from '../tabs/tabs';
 import { HomePage } from '../home/home';
-import { PostListPage } from '../post_list/postlist';
-import { UserListPage } from '../user_list/userlist';
-import { Tab } from '../../models/tab.model';
 
 @Component({
     selector: 'page-login',
@@ -32,7 +28,7 @@ export class LoginPage {
      * 
      * @memberOf LoginViewModel
      */
-    constructor(public navCtrl: NavController, private fb: FormBuilder, private userProvider: UserProvider) {
+    constructor(public navCtrl: NavController, public alertCtrl: AlertController, private fb: FormBuilder, private userProvider: UserProvider) {
         this.loginForm = fb.group({
             "username": ["", Validators.compose([Validators.required])],
             "password": ["", Validators.compose([Validators.required])]
@@ -51,22 +47,24 @@ export class LoginPage {
         if (this.loginForm.controls.username.value != null && this.loginForm.controls.password.value != null) {
             console.log(this.loginForm.controls.username.value);
             console.log(this.loginForm.controls.password.value);
-            // Set list tabs
-            //let tabLst: Tab[] = [];
-            //tabLst.push(new Tab(PostListPage, "Post List Page"));
-            //tabLst.push(new Tab(UserListPage, "User List Page"));
-
             if (this.userProvider.Login(this.loginForm.controls.username.value, this.loginForm.controls.password.value)) {
-                alert("Login successfully.");
-                //this.navCtrl.push(TabsPage, {tabLst});
                 this.navCtrl.push(HomePage);
             }
             else {
-                alert("Login failed.");
+                this.showAlert('Login Failed', 'Username or password is not correct.');
             }
         }
         else {
-            alert("Username or password is incorrect.");
+            this.showAlert('Login Failed', 'Please input username and password.');
         }
+    }
+
+    private showAlert(title: string, message: string) {
+        let alert = this.alertCtrl.create({
+            title: title,
+            subTitle: message,
+            buttons: ['OK']
+        });
+        alert.present();
     }
 }

@@ -17,15 +17,18 @@ export class PostListPage {
     }
 
     loadPost() {
+        let loader = this.loadingCtrl.create({
+            content: "Please wait..."
+        });
+        loader.present();
         this.postService.load()
             .then(data => {
                 this.posts = data;
+                loader.dismiss();
+            })
+            .catch(error => {
+                console.log('error');
             });
-        let loader = this.loadingCtrl.create({
-            content: "Please wait...",
-            duration: 3000
-        });
-        loader.present();
     }
 }
 

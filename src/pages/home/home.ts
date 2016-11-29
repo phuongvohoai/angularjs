@@ -3,16 +3,15 @@ import { NavController, MenuController } from 'ionic-angular';
 import { UserListPage } from '../user_list/userlist';
 import { PostDetailPage } from '../post_detail/postdetail';
 import { PostListPage } from '../post_list/postlist';
-import { PostProvider } from '../../providers/post.provider';
 import { NotificationPage } from '../notification/notification';
 import { Tab } from '../../models/tab.model';
 
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html',
-    providers: [PostProvider]
 })
 export class HomePage {
+
 
     viewListUserPage = UserListPage;
     addPostPage = PostDetailPage;
@@ -21,21 +20,22 @@ export class HomePage {
 
     tabLst: Tab[] = [];
 
-    constructor(public navCtrl: NavController, public menuCtrl: MenuController, private postProvider: PostProvider) {
-        this.tabLst.push(new Tab(PostListPage, "Post List Page"));
-        this.tabLst.push(new Tab(UserListPage, "User List Page"));
+    constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
+        this.tabLst.push(new Tab(PostListPage, "Việc tìm người", "ios-albums-outline"));
+        this.tabLst.push(new Tab(UserListPage, "Người tìm việc", "ios-people-outline"));
+        this.tabLst.push(new Tab(UserListPage, "Việc gần bạn", "ios-navigate-outline"));
     }
 
     openMenu() {
         this.menuCtrl.open();
     }
-    viewPostDetail(){
+    viewPostDetail() {
         this.navCtrl.push(PostDetailPage);
     }
-    viewNotification(){
+    viewNotification() {
         this.navCtrl.push(NotificationPage);
     }
-    ionViewLoaded (){
+    ionViewLoaded() {
     }
 
 }

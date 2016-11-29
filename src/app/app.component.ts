@@ -1,3 +1,4 @@
+import { HomePage } from './../pages/home/home';
 import { Component ,ViewChild} from '@angular/core';
 import { Nav, Platform, AlertController } from "ionic-angular";
 import { StatusBar, Splashscreen } from "ionic-native";
@@ -25,7 +26,7 @@ import { AboutPage } from '../pages/about/about';
 
 export class WAW_Application {
 	@ViewChild(Nav) nav: Nav;
-	rootPage = LoginPage;
+	rootPage = HomePage;
 	pages: Array<{title: string, icon: string, component: any}>;
 
 	constructor(private alertCtrl: AlertController, private platform: Platform, private translate: TranslateService) {

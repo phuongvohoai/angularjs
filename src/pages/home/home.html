@@ -1,22 +1,17 @@
 <ion-header>
-    <ion-navbar hideBackButton color="primary">
+    <ion-navbar hideBackButton color="orange">
         <ion-buttons left>
             <button ion-button icon-only (click)="openMenu()"> 
                 <ion-icon name="menu"></ion-icon>
             </button>
         </ion-buttons>
-        <ion-title>
-            {{"Title.Home" | translate}}
-        </ion-title>
+        <ion-title>{{"Title.Home" | translate}}</ion-title>
         <ion-buttons end>
-            <button ion-button icon-only (click)="viewPostDetail()">
-                <ion-icon name="add"></ion-icon>
+            <button ion-button icon-only (click)="viewNotification()" class="mr10">
+                <ion-icon name="ios-search-outline"></ion-icon>
             </button>
             <button ion-button icon-only (click)="viewNotification()">
-                <ion-icon name="notifications"></ion-icon>
-            </button>
-            <button ion-button icon-only>
-                <ion-icon name="search"></ion-icon>
+                <ion-icon name="ios-notifications-outline"></ion-icon>
             </button>
         </ion-buttons>
     </ion-navbar>
@@ -24,4 +19,9 @@
 
 <ion-content padding>
     <page-tabs [arrayTab]="tabLst"></page-tabs>
+    <ion-fab left bottom>
+        <button ion-fab color="peterriver">
+            <ion-icon name="ios-create-outline"></ion-icon>
+        </button>
+    </ion-fab>
 </ion-content>

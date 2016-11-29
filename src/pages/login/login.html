@@ -1,29 +1,26 @@
-<ion-header>
-    <ion-navbar color="primary">
-        <ion-title>
-            {{ 'Title.Login' | translate }}
-        </ion-title>
-    </ion-navbar>
-</ion-header>
+<ion-content padding class="text-center p20 pt70 pb70 wet-color">
+    <div class="full-width welcome-panel">
+        <h2 style="margin-left: -90px !important;"><strong>Chào mừng</strong></h2>
+        <h5>bạn đến với <span class="red-color">WorkAnyWhere</span></h5>
+    </div>
+    <div class="ml40 mr40 fl white-color">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="full-width mt80">
+            <ion-item>
+                <ion-input type="text" id="username" placeholder="{{'User.Username' | translate}}" formControlName="username"></ion-input>
+            </ion-item>
+            <control-messages [control]="loginForm.controls.username"></control-messages>
 
-<ion-content padding>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <ion-item>
-            <ion-label stacked>{{'User.Username' | translate}}</ion-label>
-            <ion-input type="text" id="username" formControlName="username"></ion-input>
-        </ion-item>
-        <control-messages [control]="loginForm.controls.username"></control-messages>
-
-        <ion-item>
-            <ion-label stacked>{{'User.Password' | translate}}</ion-label>
-            <ion-input type="password" id="password" formControlName="password"></ion-input>
-        </ion-item>
-        <control-messages [control]="loginForm.controls.password"></control-messages>
-
-        <button ion-button clear [navPush]="forgotPasswordPage">{{'Label.ForgotPassword' | translate}}</button>
-        <button ion-button class="right" clear [navPush]="signUpPage">{{'Label.SignUp' | translate}}</button>
-        <button ion-button full color="secondary" type="submit" [disabled]="!loginForm.valid">{{"Button.Login" | translate}}</button>
-    </form>
-    <button ion-button full>{{'Button.LoginViaFacebook' | translate}}</button>
-    <button ion-button full color="danger">{{'Button.LoginViaGoogle' | translate}}</button>
+            <ion-item class="mt10 fl">
+                <ion-input type="password" id="password" placeholder="{{'User.Password' | translate}}" formControlName="password"></ion-input>
+            </ion-item>
+            <control-messages [control]="loginForm.controls.password"></control-messages>
+            <button class="mt10 fl" ion-button full color="secondary" type="submit">{{"Button.Login" | translate}}</button>
+            <div class="full-width text-center mt10 fl">Hoặc</div>
+            <button class="mt10 fl" ion-button full>{{'Button.LoginViaFacebook' | translate}}</button>
+            <button class="mt10 fl" ion-button full color="danger">{{'Button.LoginViaGoogle' | translate}}</button>
+        </form>
+        <p class="full-width text-center mt10">Đây là lần đầu tiên ư?</p>
+        <button class="mt10 fl border-w" ion-button full color="light" outline [navPush]="signUpPage">{{'Label.SignUp' | translate}}</button>
+        <button class="mt10 fl border-w" ion-button full outline [navPush]="forgotPasswordPage">{{'Label.ForgotPassword' | translate}}</button>
+    </div>
 </ion-content>

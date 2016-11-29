@@ -3,7 +3,7 @@
         "Login": "Đăng nhập",
         "SignUp": "Đăng ký tài khoản",
         "ForgotPassword": "Quên mật khẩu",
-        "Home": "Chính",
+        "Home": "Work Any Where",
         "PostList": "Công việc",
         "PostDetail": "Chi tiết công việc",
         "UserList": "Người dùng",
@@ -11,7 +11,10 @@
         "EditProfile": "Chỉnh sửa hồ sơ",
         "MyPost": "Bài đăng của tôi",
         "MyExecutedJob": "Công việc của tôi",
-        "About": "Giới thiệu"
+        "About": "Giới thiệu",
+        "FindJob": "Việc tìm người",
+        "FindWorker": "Người tìm việc", 
+        "Loading": "Đang tải..."        
     },
     "Label": {
         "ForgotPassword": "Quên mật khẩu?",
@@ -28,7 +31,8 @@
         "Post": "Đăng",
         "Save": "Lưu",
         "Like": "Thích",
-        "Share": "Chia sẻ"
+        "Share": "Chia sẻ",
+        "Add":"Thêm mới"
     },
     "User": {
         "Username": "Tên tài khoản",

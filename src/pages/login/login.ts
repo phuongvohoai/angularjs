@@ -1,6 +1,6 @@
 ﻿import { AuthService } from './../../providers/auth-service';
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, ToastController } from 'ionic-angular';
 import { Validators, FormBuilder } from '@angular/forms';
 import { ForgotPasswordPage } from '../forgotpassword/forgotpassword';
 import { SignUpPage } from '../signup/signup';
@@ -17,39 +17,39 @@ export class LoginPage {
     loginForm: any;
     forgotPasswordPage = ForgotPasswordPage;
     signUpPage = SignUpPage;
-    
-    constructor(public navCtrl: NavController, public alertCtrl: AlertController, private fb: FormBuilder, private authService: AuthService) {
+
+    constructor(public navCtrl: NavController, public toastCtrl: ToastController, private fb: FormBuilder, private authService: AuthService) {
         this.loginForm = fb.group({
             "username": ["", Validators.compose([Validators.required])],
             "password": ["", Validators.compose([Validators.required])]
         });
     }
-    
+
     onSubmit() {
         if (this.loginForm.controls.username.value != null && this.loginForm.controls.password.value != null) {
             this.authService.login(this.loginForm.controls.username.value, this.loginForm.controls.password.value)
-                .then(data => {
+                .then((data: boolean) => {
                     console.log(data);
                     if (data == true) {
                         this.navCtrl.push(HomePage);
+                        this.showCustomToast('Login successfully.');
                     }
                 })
                 .catch(error => {
                     console.log('Ooop!');
-                    this.showAlert('Login Failed', 'Username or password is not correct.');
+                    this.showCustomToast('Username or password is not correct.');
                 });
         }
         else {
-            this.showAlert('Login Failed', 'Please input username and password.');
+            this.showCustomToast('Please input username and password.');
         }
     }
 
-    private showAlert(title: string, message: string) {
-        let alert = this.alertCtrl.create({
-            title: title,
-            subTitle: message,
-            buttons: ['OK']
+    private showCustomToast(message: string) {
+        let toast = this.toastCtrl.create({
+            message: message,
+            duration: 2000
         });
-        alert.present();
+        toast.present();
     }
 }

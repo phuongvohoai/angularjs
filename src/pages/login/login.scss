@@ -1,3 +1,36 @@
 page-login {
-    
+    background-color: #95a5a6;
+    .full-width {
+        width: 100%;
+        float: left;
+    }
+    .scroll-content {
+        padding-top: 20% !important;
+    }
+    .indent20 {
+        text-indent: 20%;
+    }
+    .welcome-panel > h2, .welcome-panel > h5{
+        margin: 0px !important;
+        color: #fff;
+    }
+    .red-color {
+        color: #f88080;
+        font-weight: 700;
+    }
+    .mt80 {
+        margin-top: 80px !important;
+    }
+    .mt10 {
+        margin-top: 10px;
+    }
+    .border-w {
+        border-width: 1px !important;
+    }
+    .fl {
+        float: left;
+    }
+    .white-color {
+        color: #fff;
+    }
 }

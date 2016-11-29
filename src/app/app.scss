@@ -6,9 +6,10 @@
 
 // Error message
 .msgError {
-    color: red;
+    color: #ecf0f1;
     font-size: 12px;
-    margin: 5px 0px 0px 15px;
+    margin: 5px 0px 10px 15px;
+    text-align: left;
 }
 
 // Alert Control
@@ -16,7 +17,31 @@
     min-width: 30%;
 }
 
-.alert-md>.alert-button>.button-inner {
+.alert-md >.alert-button >.button-inner {
     -webkit-justify-content: center;
     justify-content: center;
+}
+.bg-wet {
+    background: #34495e !important;
+}
+.toolbar .toolbar-background {
+    border: transparent !important;
+}
+.card-ios {
+    box-shadow: 1px 1px 1px 2px #f39c12 !important;
+}
+.card-ios ion-card-title {
+    color: #f39c12 !important;
+}
+.card-ios ion-card-content {
+    padding: 0px !important;
+}
+.p0 {
+    padding: 0px !important;
+}
+.p10-0 {
+    padding: 10px 0 !important;
+}
+.fz12 {
+    font-size: 12px !important;
 }

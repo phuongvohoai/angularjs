@@ -7,7 +7,10 @@ export class Post implements IPost {
     jobPosition: string;
     describe: string;
     cost: number;
+    unit: string;
+    createDate: Date;
     applyDeadline: string;
     distance: number;
     status: string;
+    view: number;
 }   

@@ -26,7 +26,7 @@ import { AboutPage } from '../pages/about/about';
 
 export class WAW_Application {
 	@ViewChild(Nav) nav: Nav;
-	rootPage = HomePage;
+	rootPage = LoginPage;
 	pages: Array<{title: string, icon: string, component: any}>;
 
 	constructor(private alertCtrl: AlertController, private platform: Platform, private translate: TranslateService) {

@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>{{"Title.AddPost"|translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding="true" class="has-header">
+    <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Title"|translate}}</ion-label>
+        <ion-input [(ngModel)]="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Category"|translate}}</ion-label>
+        <ion-select [(ngModel)]="category">
+            <ion-option *ngFor="let category of categories" selected="true">{{category.name}}</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>{{"Post.ContractType"|translate}}</ion-label>
+        <ion-select [(ngModel)]="type">
+            <ion-option *ngFor="let contracttype of contracttypes" selected="true">{{contracttype.name}}</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>{{"Post.JobPosition"|translate}}</ion-label>
+        <ion-input [(ngModel)]="jobposition"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label color="primary" stacked>{{"Post.Describe"|translate}}</ion-label>
+        <ion-textarea rows="3" [(ngModel)]="describe"></ion-textarea>
+    </ion-item>
+
+    <ion-row>
+        <ion-item>
+            <ion-label color="primary" stacked>{{"Post.Salary"|translate}} (VND)</ion-label>
+            <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="primary" stacked>Loại phí</ion-label>
+            <ion-select [(ngModel)]="unit">
+                <ion-option *ngFor="let unit of units" selected="true">{{unit}}</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-row>
+
+    <ion-item>
+        <ion-label color="primary" stacked>{{"Post.ApplyDeadline"|translate}}</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" [(ngModel)]="applydeadline"></ion-datetime>
+    </ion-item>
+
+    <ion-label color="primary">{{"Post.AddPhoto"|translate}}</ion-label>
+    <button ion-button round class="center" (click)="addPost()">{{"Button.Post"|translate}}</button>
+</ion-content>

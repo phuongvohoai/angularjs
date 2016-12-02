@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 import { UserListPage } from '../user_list/userlist';
+import { PostPage } from '../post/post';
 import { PostDetailPage } from '../post_detail/postdetail';
 import { PostListPage } from '../post_list/postlist';
 import { NotificationPage } from '../notification/notification';
@@ -28,6 +29,9 @@ export class HomePage {
 
     openMenu() {
         this.menuCtrl.open();
+    }
+    viewAddPost(){
+        this.navCtrl.push(PostPage);
     }
     viewPostDetail() {
         this.navCtrl.push(PostDetailPage);

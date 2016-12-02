@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { SignUpPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
 import { ForgotPasswordPage } from '../pages/forgotpassword/forgotpassword';
+import { PostPage } from '../pages/post/post';
 import { PostDetailPage } from '../pages/post_detail/postdetail';
 import { PostListPage } from '../pages/post_list/postlist';
 import { UserDetailPage } from '../pages/user_detail/userdetail';
@@ -31,6 +32,7 @@ import { TabsPage } from '../pages/tabs/tabs';
         SignUpPage,
         LoginPage,
         ForgotPasswordPage,
+        PostPage,
         PostDetailPage,
         PostListPage,
         UserDetailPage,
@@ -53,6 +55,7 @@ import { TabsPage } from '../pages/tabs/tabs';
         SignUpPage,
         LoginPage,
         ForgotPasswordPage,
+        PostPage,
         PostDetailPage,
         PostListPage,
         UserDetailPage,

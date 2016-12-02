@@ -17,7 +17,7 @@
                         <button ion-button small color="dark">20$</button>
                     </ion-col>
                 </ion-row>
-                <!--Summary-->                
+                <!--Summary-->
                 <ion-row class="p10-0">
                     <p>{{post.summary}}</p>
                 </ion-row>
@@ -26,13 +26,13 @@
                     <button ion-button width-30 small color="amethyst">
                         <ion-icon name="ios-person-outline" class="fz12">  {{post.authorName}}</ion-icon>
                     </button>
-                    <button ion-button width-30 small color="danger" >
+                    <button ion-button width-30 small color="danger">
                             <ion-icon name="ios-folder-open-outline" class="fz12">  {{post.category}}</ion-icon>  
                     </button>
-                    <button width-30 ion-button small color="peterriver" >
+                    <button width-30 ion-button small color="peterriver">
                             <ion-icon name="ios-browsers-outline" class="fz12">  {{post.contractType}}</ion-icon>
                     </button>
-                    <button width-30 ion-button small color="emeralad" >
+                    <button width-30 ion-button small color="emeralad">
                             <ion-icon name="ios-pin-outline" class="fz12">  {{post.distance}} Km</ion-icon>  
                     </button>
                 </ion-row>
@@ -40,8 +40,8 @@
         </ion-card-content>
         <ion-row style="border-top: 1px solid #387ef5;">
             <ion-col width-33>
-                <button ion-button clear small>
-                    <ion-icon name="ios-open-outline" class="right"> Chi tiết</ion-icon>
+                <button ion-button clear small [navPush]="postDetail">
+                    <ion-icon name="ios-open-outline" class="right"> {{"Button.Detail"|translate}}</ion-icon>
                 </button>
             </ion-col>
             <ion-col width-33>

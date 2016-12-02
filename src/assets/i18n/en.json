@@ -3,7 +3,8 @@
         "Login": "Login",
         "SignUp": "Sign Up",
         "ForgotPassword": "Forgot Password",
-        "Home": "Home",
+        "Home": "WorkAnywhere",
+        "AddPost": "Add Post",
         "PostList": "Jobs",
         "PostDetail": "Job Detail",
         "UserList": "Workers",
@@ -28,7 +29,8 @@
         "Post": "Post",
         "Save": "Save",
         "Like": "Like",
-        "Share": "Share"
+        "Share": "Share",
+        "Detail": "Detail"
     },
     "User": {
         "Username": "Username",
@@ -48,15 +50,16 @@
     "Post": {
         "Title": "Title",
         "Category": "Category",
-        "Type": "Job Type",
+        "ContractType": "Job Type",
         "JobPosition": "Job Position",
         "Describe": "Describe",
-        "Cost": "Cost",
+        "Salary": "Salary",
         "ApplyDeadline": "Apply Deadline",
         "AddPhoto": "Add Photo"
     },
     "Message": {
-        "ForgotPassword": "Enter your email address to reset your password!"
+        "ForgotPassword": "Enter your email address to reset your password!",
+        "Loading": "Loading..."
     },
     "ErrorCodes": {
         "required": "This field is required",

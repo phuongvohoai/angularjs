@@ -3,7 +3,8 @@
         "Login": "Đăng nhập",
         "SignUp": "Đăng ký tài khoản",
         "ForgotPassword": "Quên mật khẩu",
-        "Home": "Work Any Where",
+        "Home": "Work Anywhere",
+        "AddPost": "Đăng việc",
         "PostList": "Công việc",
         "PostDetail": "Chi tiết công việc",
         "UserList": "Người dùng",
@@ -13,8 +14,7 @@
         "MyExecutedJob": "Công việc của tôi",
         "About": "Giới thiệu",
         "FindJob": "Việc tìm người",
-        "FindWorker": "Người tìm việc", 
-        "Loading": "Đang tải..."        
+        "FindWorker": "Người tìm việc"
     },
     "Label": {
         "ForgotPassword": "Quên mật khẩu?",
@@ -32,7 +32,8 @@
         "Save": "Lưu",
         "Like": "Thích",
         "Share": "Chia sẻ",
-        "Add":"Thêm mới"
+        "Add": "Thêm mới",
+        "Detail": "Chi tiết"
     },
     "User": {
         "Username": "Tên tài khoản",
@@ -52,15 +53,16 @@
     "Post": {
         "Title": "Tiêu đề",
         "Category": "Loại ngành nghề",
-        "Type": "Loại công việc",
+        "ContractType": "Loại công việc",
         "JobPosition": "Vị trí công việc",
         "Describe": "Mô tả",
-        "Cost": "Chi phí",
+        "Salary": "Lương",
         "ApplyDeadline": "Hạn nộp hồ sơ",
         "AddPhoto": "Thêm hình ảnh"
     },
     "Message": {
-        "ForgotPassword": "Nhập địa chỉ email để lấy lại mật khẩu!"
+        "ForgotPassword": "Nhập địa chỉ email để lấy lại mật khẩu!",
+        "Loading": "Đang tải..."
     },
     "ErrorCodes": {
         "required": "Bắt buộc",
